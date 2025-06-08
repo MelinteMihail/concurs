@@ -34,11 +34,11 @@ header nav {
 }
 
 header nav .left {
-    animation: 1s ease-out 0s 1 outToInLittle;
+    animation: 1s ease-out 0s 1 outTopToInLittle;
 }
 
 header nav .right {
-    animation: 1.5s ease-out 0s 1 outToInBig;
+    animation: 1.5s ease-out 0s 1 outTopToInBig;
 }
 
 header .container {
@@ -50,7 +50,7 @@ header .container {
 
     margin-top: 100px;
 
-    animation: 2.5s ease-out 0s 1 outToInBig;
+    animation: 2.5s ease-out 0s 1 outTopToInBig;
 }
 
 header .container h1 {
@@ -69,8 +69,162 @@ header .container h2 {
     font-size: 32px;
 }
 
+header .images {
+    overflow: hidden;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
 
-@keyframes outToInLittle {
+header .images img {
+    height: 300px;
+    border-radius: 15px;
+}
+
+header .images .design-image.one {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    align-self: start;
+    transform: skew(10deg);
+    box-shadow: -10px 10px 5px 0px rgba(255, 92, 0, 0.2);
+    animation: 2.3s ease-out 0s 1 outLeftToIn;
+}
+
+header .images .design-image.two {
+    margin-bottom: 30px;
+    margin-right: 50px; 
+    transform: skew(-10deg);
+    box-shadow: 10px 10px 5px 0px rgba(255, 92, 0, 0.2);
+    animation: 2.3s ease-out 0s 1 outRightToIn;
+
+}
+
+main .content .learn .image,
+main .content .exercise .image {
+    width: 30%;
+}
+
+main .explanation {
+
+    margin-top: 2rem;
+    background: var(--lighter-dark-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+
+    padding-block: 2rem;
+    padding-inline: 5rem;
+}
+
+main .explanation .title {
+    font-size: 32px;
+}
+
+main .explanation .content {
+    display: flex;
+    gap: 7rem;
+}
+
+
+main .explanation .content .learn,
+main .explanation .content .exercise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 500px;
+}
+
+main .explanation .content .learn .text,
+main .explanation .content .exercise .text {
+    font-size: calc(1rem + 2px);
+    text-align: center;
+}
+
+main .explanation .content .learn .content-title,
+main .explanation .content .exercise .content-title {
+    font-size: 28px;
+}
+
+main .courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+
+    gap: 5rem;
+}
+
+main .courses .courses-title {
+    /* font-size: 24px !important; */
+}
+
+main .courses .courses-content {
+    /* background-color: red; */
+    width: 100%;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: 7rem;  
+}
+
+main .courses .courses-content .html-css,
+main .courses .courses-content .javascript {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background: var(--lighter-dark-purple);
+    border-radius: 15px;
+}
+
+main .courses .courses-content .html-css .text,
+main .courses .courses-content .javascript .text {
+    font-size: calc(1rem + 12px);
+}
+
+main .courses .courses-content .html-css .logo img,
+main .courses .courses-content .javascript .logo img {
+    width: 142px;
+    height: 160px;
+}
+
+footer {
+    margin-top: 10rem;
+    gap: 3rem;
+
+    
+    padding-block: 2rem;
+    padding-inline: 5rem;
+    background-color: var(--lighter-dark-purple);
+
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+footer .top,
+footer .bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-around
+}
+
+footer .bot .text {
+    width: 25%;
+}
+
+footer .top .logo img {
+    width: 200px;
+}
+
+@keyframes outTopToInLittle {
     0% {
         transform: translateY(-200%);
     }
@@ -80,7 +234,7 @@ header .container h2 {
     }
 }
 
-@keyframes outToInBig {
+@keyframes outTopToInBig {
     0% {
         transform: translateY(-300%);
     }
@@ -89,3 +243,24 @@ header .container h2 {
         transform: translateY(0);
     }
 }
+
+@keyframes outLeftToIn {
+    0% {
+        transform: translateX(-200%) skew(10deg);
+    }
+
+    100% {
+        transform: translateX(0) skew(10deg);
+    }
+}
+
+@keyframes outRightToIn {
+    0% {
+        transform: translateX(200%) skew(-10deg);
+    }
+
+    100% {
+        transform: translateX(0) skew(-10deg);
+    }
+}
+
