@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --dark-purple: #360f5a;
+    --lighter-dark-purple: #601f9e;
+    --neon-orange: #ff5c00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, system-ui;
+}
+
+body {
+    background-color: var(--dark-purple);
+    color: #fff;
+}
+
+img {
+   margin: 0;
+   padding: 0;
+   display:block; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--neon-orange);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 50px;
+    margin-top: 20px;
+}
+
+header nav .left {
+    animation: 1s ease-out 0s 1 outTopToInLittle;
+}
+
+header nav .right {
+    animation: 1.5s ease-out 0s 1 outTopToInBig;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+
+    margin-top: 100px;
+
+    animation: 2.5s ease-out 0s 1 outTopToInBig;
+}
+
+header .container h1 {
+    font-size: 45px;
+}
+
+header .container h2 {
+    color: #d7dee4;
+}
+
+header .container h1 span {
+    color: var(--neon-orange);
+}
+
+header .container h2 {
+    font-size: 32px;
+}
+
+header .images {
+    overflow: hidden;
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+header .images img {
+    height: 300px;
+    border-radius: 15px;
+}
+
+header .images .design-image.one {
+    margin-left: 200px;
+    margin-bottom: 1px;
+    align-self: start;
+    transform: skew(10deg);
+    box-shadow: -10px 10px 5px 0px rgba(255, 92, 0, 0.2);
+    animation: 2.3s ease-out 0s 1 outLeftToIn;
+}
+
+header .images .design-image.two {
+    margin-bottom: 50px;
+    margin-right: 200px; 
+    transform: skew(-10deg);
+    box-shadow: 10px 10px 5px 0px rgba(255, 92, 0, 0.2);
+    animation: 2.3s ease-out 0s 1 outRightToIn;
+
+}
+
+header .arrow {
+  position: absolute;
+  display: inline-block;
+  width: 62px;
+  height: 33px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  animation: fadeIn 3s ease-in-out forwards, bounce 1.2s infinite ease-in-out;
+  transition: opacity 0.5s ease;
+}
+
+header .arrow::before,
+header .arrow::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 45px;
+  border-radius: 9999px;
+  background-color: #ffffff;
+  transform-origin: 50% calc(100% - 3px);
+
+}
+
+header .arrow::before {
+  transform: rotate(45deg);
+}
+
+header .arrow::after {
+  transform: rotate(-45deg);
+} 
+
+header .arrow.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+header .arrow.hide::before,
+header .arrow.hide::after {
+  opacity: 0;
+}
+
+main .content .learn .image,
+main .content .exercise .image {
+    width: 30%;
+}
+
+main .explanation {
+    margin-top: 2rem;
+    background: var(--lighter-dark-purple);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem 5rem 5rem 5rem;
+}
+
+main .explanation .title {
+    font-size: 32px;
+}
+
+main .explanation .content {
+    display: flex;
+    align-items: flex-start;
+    gap: 7rem;
+}
+
+
+main .explanation .content .learn,
+main .explanation .content .exercise {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    width: 500px;
+}
+
+main .explanation .content .learn .text,
+main .explanation .content .exercise .text {
+    font-size: calc(1rem + 2px);
+    text-align: center;
+}
+
+main .explanation .content .learn .content-title,
+main .explanation .content .exercise .content-title {
+    font-size: 28px;
+}
+
+main .courses {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2rem;
+
+    gap: 5rem;
+}
+
+main .courses .courses-title {
+    font-size: 24px !important;
+}
+
+main .courses .courses-content {
+    width: 100%;
+    padding-inline: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7rem;  
+}
+
+main .courses .courses-content .html-css,
+main .courses .courses-content .javascript {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--lighter-dark-purple);
+    border-radius: 15px;
+
+    padding-bottom: 2rem;
+}
+
+main .courses .courses-content .html-css .text,
+main .courses .courses-content .javascript .text {
+    font-size: calc(1rem + 24px);
+    text-align: center;
+}
+
+
+
+footer {
+    margin-top: 10rem;
+ 
+    padding-block: 2rem;
+    padding-inline: 10rem;
+    background-color: var(--lighter-dark-purple);
+
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+footer .top,
+footer .bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-inline: 2rem;
+}
+
+footer .bot .text{
+    width: 20%;
+}
+
+footer .bot .concurs {
+    width: 26ch;
+}
+
+footer .top .logo img {
+    width: 200px;
+}
+
+@keyframes outTopToInLittle {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes outTopToInBig {
+    0% {
+        transform: translateY(-300%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes outLeftToIn {
+    0% {
+        transform: translateX(-200%) skew(10deg);
+    }
+
+    100% {
+        transform: translateX(0) skew(10deg);
+    }
+}
+
+@keyframes outRightToIn {
+    0% {
+        transform: translateX(200%) skew(-10deg);
+    }
+
+    100% {
+        transform: translateX(0) skew(-10deg);
+    }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, 0);
+  }
+  
+  50% {
+    transform: translate(-50%, -10px);
+  }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

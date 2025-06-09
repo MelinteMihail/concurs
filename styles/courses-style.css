@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    --dark-purple: #360f5a;
+    --lighter-dark-purple: #601f9e;
+    --neon-orange: #ff5c00;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif, system-ui;
+}
+
+body {
+    background-color: var(--dark-purple);
+    color: #fff;
+}
+
+img {
+   margin: 0;
+   padding: 0;
+   display:block; 
+}
+
+a {
+    text-decoration: none;
+    color: var(--neon-orange);
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 50px;
+    margin-top: 20px;
+}
+
+header nav .left {
+    animation: 1s ease-out 0s 1 outTopToInLittle;
+}
+
+header nav .right {
+    animation: 1.5s ease-out 0s 1 outTopToInBig;
+}
+
+header .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+header .container .title {
+    margin-top: -1rem;
+    margin-bottom: 1.25rem;
+}
+
+
+header .container .summary {
+    width: 800px;
+}
+
+main {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    gap: 2rem;
+}
+
+main a {
+    color: #fff;
+}
+
+main .html,
+main .css,
+main .flexbox {
+    width: 800px;
+    background: var(--lighter-dark-purple);
+    padding: 1.5rem 1.5rem 0.5rem 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+
+    border-radius: 10px;
+    border: 1px solid rgba(255, 92, 0, 0.5);
+}
+
+main .html .title h2,
+main .css .title h2,
+main .flexbox .title h2 {
+    border-bottom: 1px solid var(--neon-orange);
+
+    margin-bottom: 10px;
+}
+
+main .html .lessons a > div,
+main .css .lessons a > div,
+main .flexbox .lessons a > div {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 10px;
+
+    transition: all 0.5s;
+}
+
+main .html .lessons a > div:hover,
+main .css .lessons a > div:hover,
+main .flexbox .lessons a > div:hover {
+    background-color: #b079e5;
+}
+
+main .html .title,
+main .css .title,
+main .flexbox .title {
+    margin-bottom: 10px;
+}
+
+.img {
+    width: 30px;
+    height: 30px;
+}
+
+footer {
+    margin-top: 10rem;
+ 
+    padding-block: 2rem;
+    padding-inline: 10rem;
+    background-color: var(--lighter-dark-purple);
+
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+
+footer .top,
+footer .bot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-inline: 2rem;
+}
+
+footer .bot .text{
+    width: 20%;
+}
+
+footer .bot .concurs {
+    width: 26ch;
+}
+
+footer .top .logo img {
+    width: 200px;
+}
+
+@keyframes outTopToInLittle {
+    0% {
+        transform: translateY(-200%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes outTopToInBig {
+    0% {
+        transform: translateY(-300%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
