@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -36,6 +38,8 @@
             <img src="https://nerdleveltech.com/wp-content/uploads/html-web-design-code-for-developers-and-designers-2022-11-08-08-38-48-utc.webp" alt="" class="design-image two">
         </div>
 
+        <div class="arrow"></div>
+
     </header>
 
     <main>
@@ -47,7 +51,7 @@
             </div>
 
             <div class="content">
-                <div class="learn">
+                <div class="learn" data-aos="fade-right">
                     <div class="image">
                         <img src="images/book-open-solid.svg" alt="open book">
                     </div>
@@ -66,7 +70,7 @@
                     </div>
                 </div>
 
-                <div class="exercise">
+                <div class="exercise" data-aos="fade-left">
                     <div class="image">
                         <img src="images/file-pen-solid.svg" alt="pen and paper">
                     </div>
@@ -96,28 +100,32 @@
             </div>
 
             <div class="courses-content">
-                <div class="html-css">
-                    <div class="logo">
-                        <img src="images/html_css_neon.svg" alt="html css logo">
-                    </div>
-
-                    <div class="text">
-                        <p>
-                            <a href="lectii/html-css/html-css-course.html">HTML si CSS</a>
-                        </p>
-                    </div>
+                <div class="html-css" data-aos="fade-right">
+                    <a href="lectii/html-css/html-css-course.html">
+                        <div class="logo">
+                            <img src="images/html-css-neon.svg" alt="html css logo">
+                        </div>
+                        
+                        <div class="text">
+                            <p>
+                                HTML si CSS
+                            </p>
+                        </div>
+                    </a>
                 </div>
 
-                <div class="javascript">
-                    <div class="logo">
-                        <img src="images/js_neon.svg" alt="javascript logo">
-                    </div>
+                <div class="javascript" data-aos="fade-left">
+                    <a href="lectii/javascript/javascript-course.html">
+                        <div class="logo">
+                            <img src="images/js-neon.svg" alt="javascript logo">
+                        </div>
 
-                    <div class="text">
-                        <p>
-                            <a href="lectii/javascript/javascript-course.html">JAVASCRIPT</a>
-                        </p>
-                    </div>
+                        <div class="text">
+                            <p>
+                                JAVASCRIPT
+                            </p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
@@ -130,11 +138,12 @@
                 <img src="images/logo.svg" alt="logo">
             </div>
 
-            <div class="concurs">
+            <div class="liceu">
                 <p>
-                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
                 </p>
             </div>
+            
         </div>
 
         <div class="bot">
@@ -144,9 +153,9 @@
                 </p>
             </div>
 
-            <div class="liceu">
+            <div class="concurs">
                 <p>
-                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
                 </p>
             </div>
         </div>
