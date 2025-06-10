@@ -3,9 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/js-neon.svg" alt="js logo">
+            </div>
+
+            <div class="text">
+                <h1>Variabile si Operatori</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                In sectiunile anterioare, ai invatat cum sa structurezi paginile web folosind HTML si cum sa le stilizezi cu CSS. Urmatorul pas este sa facem pagina web interactiva, iar exact pentru acest lucru este destinat JavaScript.
+            </p>
+
+            <p>
+                In aceasta sectiune, ne vom concentra pe fundamentele JavaScript si pe modul in care il poti folosi pentru a manipula toate interactiunile dintre pagina web si utilizator. Pregatit sa dai viata codului tau?
+            </p>
+
+            <h2>
+                Cum sa rulezi cod JavaScript
+            </h2>
+
+            <p>
+                Majoritatea codului JavaScript pe care il vom scrie in acest curs va fi executat prin intermediul browserului. Cel mai simplu mod de a incepe este sa creezi un fisier HTML care contine codul JavaScript. Foloseste snipet-ul VS Code ! + TAB pentru a genera scheletul HTML de baza intr-un fisier de pe computerul tau. Asigura-te ca includi tag-ul &lt;script&gt;. Iata un exemplu:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                        &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+                        &lt;title&gt;Document&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+
+                        &lt;script&gt;
+                            console.log("Hello, World!")
+                        &lt;/script&gt;
+
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </code>
+            </pre>
+
+            <p>
+                Odata ce ai salvat si deschis fisierul HTML intr-un browser, poti accesa consola pentru a vedea output-ul comenzii console.log.
+            </p>
+
+            <p>
+                Pasii pentru a deschide consola browserului:
+
+                <ol>
+                    <li>Click dreapta pe pagina web goala.</li>
+                    <li>Selecteaza “Inspect” sau “Inspect Element” pentru a deschide Developer Tools.</li>
+                    <li>Gaseste si selecteaza tab-ul “Console” → unde vei vedea mesajul "Hello, World!".</li>
+                </ol>
+            </p>
+
+            <p>
+                console.log() este comanda utilizata pentru a afisa ceva in consola dezvoltatorului din browserul tau. Poti folosi aceasta comanda pentru a printa rezultatele oricaruia dintre articolele si exercitiile urmatoare direct in consola. Te incurajam sa codezi alaturi de toate exemplele din aceasta si din lectiile viitoare!
+            </p>
+
+            <p>
+                O alta modalitate de includere a JavaScript-ului intr-o pagina web este prin intermediul unui script extern. Acest lucru este foarte similar cu linkarea unor documente CSS externe in site-ul tau.
+
+                Pentru a incarca un script extern, poti folosi tag-ul &lt;script&gt; in HTML astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;script src="javascript.js"&gt;&lt;/script&gt;
+                </code>
+            </pre>
+
+            <p>
+                Fisierele JavaScript au extensia .js, similar cu .css pentru stiluri. Fisierele JavaScript externe sunt folosite pentru scripturi mai complexe.
+            </p>
+            
+            <p>
+                Am numit fisierul javascript.js, dar am fi putut alege orice nume, cum ar fi my-script.js sau chiar fara nume. Cel mai important este extensia .js.
+            </p>
+
+            <h2>
+                Variabile
+            </h2>
+
+            <p>
+                Acestea sunt blocurile fundamentale ale oricarui program. Poti considera variabilele drept „containere de stocare” pentru datele din codul tau.
+            </p>
+
+            <p>
+                Poti declara variabile folosind cuvântul cheie let.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    let name = "John";
+                    let surname = "Doe";
+
+                    console.log(name);
+                    console.log(surname);
+                </code>
+            </pre>
+
+            <p>
+                Ce va afisa console.log? Incearca!
+            </p>
+
+            <p>
+                Poti de asemenea sa reatribui variabile:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    let age = 11;
+                    console.log(age); // afiseaza 11
+
+                    age = 54;
+                    
+                    console.log(age);
+                </code>
+            </pre>
+
+            <p>
+                Observa lipsa lui let pe linia 4 - nu avem nevoie de el deoarece variabila a fost deja declarata mai devreme si doar ii reatribuim valoarea aici!
+            </p>
+
+            <p>
+                Reatribuirea este tare si toate cele, dar ce facem daca nu vrem sa se intample? De exemplu, am putea avea o constanta pi care nu va trebui niciodata reatribuita. Putem realiza acest lucru folosind cuvantul cheie const.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    const pi = 3.14;
+                    pi = 10;
+
+                    console.log(pi);
+                </code>
+            </pre>
+
+            <p>
+                Intuitia ta poate sa iti spuna ca 3.14 va fi afisat. Incearca!
+            </p>
+
+            <p>
+                Este aruncata o eroare. Nici macar nu ajunge la console.log! Te poti intreba de ce am vrea o eroare in codul nostru. Adevarul este ca erorile sunt incredibil de utile pentru a ne spune ce este in neregula cu codul nostru si exact unde este problema. Fara ele, codul nostru tot nu ar face ce ne dorim, dar ar fi un chin sa incercam sa gasim ce este gresit!
+            </p>
+
+            <p>
+                Asadar, exista doua moduri de a declara o variabila:
+
+                <ul>
+                    <li>let, pe care o putem reatribui.</li>
+                    <li>const, pe care nu o putem reatribui si va arunca o eroare daca incercam.</li>
+                </ul>
+            </p>
+
+            <p>
+                Exista si un al treilea mod, var, care era modul original prin care variabilele erau declarate in JavaScript. var este similar cu let prin faptul ca variabilele declarate astfel pot fi reatribuite, dar are si alte particularitati care au fost rezolvate cand limbajul a introdus let si const. In mare parte, nu mai este folosit. Totusi, este posibil sa dai peste cod care foloseste var la un moment dat, asa ca este util sa stii ca exista.
+            </p>
+
+            <h2>
+                Numerele
+            </h2>
+
+            <p>
+                Numerele sunt elementele de baza ale logicii de programare. De fapt, este greu sa ne gandim la o sarcina de programare utila care sa nu implice macar putina matematica de baza... asa ca este evident ca intelegerea modului in care functioneaza numerele este foarte importanta. Din fericire, este si destul de simplu.
+            </p>
+
+            <p>
+                Daca ai fost la scoala, probabil nu vei gasi conceptul prea dificil de inteles. De exemplu, expresia matematica (3 + 2) - 76 * (1 + 1) este de asemenea un cod valid in JavaScript. Daca introduci asta intr-o comanda console.log, aceasta va evalua expresia si va afisa numarul corect. Incearca!
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="javascript-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="dt-cond.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

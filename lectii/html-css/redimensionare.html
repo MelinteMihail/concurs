@@ -3,9 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Redimensionarea elementelor</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Sa analizam putin mai atent ce s-a intamplat atunci cand ai aplicat flex: 1 pe acele elemente flex in lectia anterioara.
+            </p>
+
+            <h2>Sintaxa prescurtata a flex</h2>
+
+            <p>
+                Declaratia flex este de fapt o prescurtare pentru trei proprietati pe care le poti seta pe un element flex. Aceste proprietati influenteaza modul in care elementele flex isi ajusteaza dimensiunea in interiorul containerului lor. Ai mai vazut proprietati prescurtate pana acum, dar nu le-am definit oficial.
+            </p>
+
+            <p>
+                In acest caz, flex este de fapt o prescurtare pentru flex-grow, flex-shrink si flex-basis.
+            </p>
+
+            <img src="../../images/flex-4.png" alt="flex description 4">
+
+            <p>
+                In captura de ecran de mai sus, flex: 1 echivaleaza cu: flex-grow: 1, flex-shrink: 1, flex-basis: 0.
+            </p>
+
+            <p>
+                Foarte des, vei vedea sintaxa prescurtata a flex definita cu o singura valoare. In acest caz, acea valoare este aplicata proprietatii flex-grow. Astfel, atunci cand am aplicat flex: 1 pe div-urile noastre, de fapt specificam flex: 1 1 0.
+            </p>
+
+            <h3>
+                Flex-grow
+            </h3>
+
+            <p>
+                flex-grow asteapta un singur numar ca valoare, iar acest numar este folosit ca „factor de crestere” al elementului flex. Cand am aplicat flex: 1 fiecarui div din containerul nostru, le spuneam tuturor sa creasca in aceeasi proportie. Rezultatul este ca toate div-urile ajung sa aiba exact aceeasi dimensiune. Daca, in schimb, aplicam flex: 2 doar unui singur div, atunci acel div ar creste de 2 ori mai mult decat celelalte.
+            </p>
+
+            <p>
+                In exemplul urmator, sintaxa prescurtata a flex contine valori pentru flex-shrink si flex-basis, specificate cu valorile lor implicite.
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="flex-grow example" src="https://codepen.io/melmivxd/embed/wBapjPK?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/wBapjPK">
+                flex-grow example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <h3>
+                Flex-shrink
+            </h3>
+
+            <p>
+                flex-shrink este similar cu flex-grow, dar seteaza „factorul de micsorare” al unui element flex. flex-shrink se aplica doar daca dimensiunea tuturor elementelor flex este mai mare decat containerul lor parinte. De exemplu, daca cele 3 div-uri de mai sus ar avea o declaratie de latime de width: 100px, iar .flex-container ar fi mai mic de 300px, div-urile ar trebui sa se micsoreze pentru a se potrivi.
+            </p>
+
+            <p>
+                Factorul de micsorare implicit este flex-shrink: 1, ceea ce inseamna ca toate elementele se vor micsora uniform. Daca nu vrei ca un element sa se micsoreze, poti specifica flex-shrink: 0;. De asemenea, poti seta valori mai mari pentru ca anumite elemente sa se micsoreze mai mult decat altele.
+            </p>
+
+            <p>
+                Iata un exemplu. Observa ca am modificat si flex-basis din motive care vor fi explicate in curand. Daca micsorezi fereastra browserului, vei observa ca .two nu devine mai mic decat latimea data de 250px, chiar daca regula flex-grow ar specifica ca fiecare element ar trebui sa fie de aceeasi dimensiune.
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="flex-shrink example" src="https://codepen.io/melmivxd/embed/raVpvpp?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/raVpvpp">
+                flex-shrink example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <p>
+                O implicatie importanta de observat aici este ca atunci cand specifici flex-grow sau flex-shrink, elementele flex nu respecta neaparat valorile tale date pentru width. In exemplul de mai sus, toate cele 3 div-uri au o latime de 250px, dar cand parintele lor este suficient de mare, ele cresc pentru a umple spatiul. In mod similar, cand parintele este prea mic, comportamentul implicit este ca acestea sa se micsoreze pentru a se potrivi. Acesta nu este un bug, dar poate fi un comportament confuz daca nu te astepti la el.
+            </p>
+
+            <h3>
+                Flex-basis
+            </h3>
+
+            <p>
+                flex-basis seteaza dimensiunea initiala a unui element flex, astfel incat orice crestere (flex-grow) sau micsorare (flex-shrink) sa inceapa de la acea dimensiune de referinta. Valoarea prescurtata implicita este flex-basis: 0%.
+            </p>
+
+            <p>
+                Motivul pentru care a trebuit sa o modificam la auto in exemplul cu flex-shrink este ca, daca flex-basis este setat la 0, acele elemente ar ignora latimea specificata (width) si totul s-ar micsora uniform. Folosirea valorii auto pentru flex-basis spune elementului sa verifice daca exista o declaratie de latime (width: 250px).
+            </p>
+
+            <h3>
+                Ce este flex: auto?
+            </h3>
+
+            <p>
+                Daca ai observat, am mentionat o noua sintaxa prescurtata, flex: auto, in nota anterioara. Totusi, nu am introdus-o complet. flex: auto este una dintre variantele prescurtate ale proprietatii flex. Cand auto este definit ca cuvant cheie in contextul flex, acesta echivaleaza cu valorile: flex-grow: 1, flex-shrink: 1 si flex-basis: auto, sau, folosind sintaxa prescurtata: flex: 1 1 auto.
+            </p>
+
+            <p>
+                Un aspect important este ca flex: auto nu este valoarea implicita atunci cand folosesti sintaxa prescurtata flex, chiar daca numele sau contine „auto”, ceea ce poate fi putin confuz la inceput. Vei intalni flex: auto si vei invata mai multe despre utilizarea sa cand vei parcurge sectiunea de exercitii.
+            </p>
+
+            <p>
+                Cel mai probabil nu vei folosi valori complexe pentru flex-grow, flex-shrink sau flex-basis. De obicei, vei utiliza declaratii simple, precum:
+
+                <ul>
+                    <li>flex: 1; → pentru a face div-urile sa creasca uniform.</li>
+                    <li>flex-shrink: 0; → pentru a impiedica anumite div-uri sa se micsoreze.</li>
+                </ul>
+            </p>
+
+            <p>
+                Exista situatii in care poti crea layout-uri mai avansate, in care anumite coloane sunt proportionale unele fata de altele. De aceea, este util sa stii ca poti folosi valori mai variate, desi acest lucru este relativ rar in practica.
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="axes.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

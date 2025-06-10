@@ -3,9 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/js-neon.svg" alt="js logo">
+            </div>
+
+            <div class="text">
+                <h1>Bazele functiilor</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Lucrurile sunt pe cale sa devina cu adevarat interesante. Pana acum ai scris o cantitate impresionanta de cod pentru a rezolva diverse probleme, dar acel cod nu a fost atat de util pe cat ar putea fi.
+            </p>
+
+            <p>
+                Imagineaza-ti ca iei unul dintre scripturile tale si il impachetezi intr-un mic pachet pe care il poti folosi din nou si din nou fara a fi nevoie sa rescrii sau sa modifici codul. Aceasta este puterea functiilor, iar ele sunt utilizate constant in JavaScript.
+            </p>
+
+            <h2>
+                Functii
+            </h2>
+
+            <p>
+                Sa discutam despre parametri si argumente in contextul urmatorului exemplu de functie:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    function favoriteAnimal(animal) {
+                        return animal + " is my favorite animal!"
+                    }
+
+                    console.log(favoriteAnimal('Goat'))
+                </code>
+            </pre>
+
+            <p>
+                In JavaScript, parametrii sunt elementele enumerate intre parantezele () in declaratia functiei. Argumentele functiei sunt valorile reale pe care alegem sa le transmitem functiei.
+            </p>
+
+            <p>
+                In exemplul de mai sus, definitia functiei este scrisa pe prima linie: function favoriteAnimal(animal). Parametrul, animal, se gaseste in interiorul parantezelor. Am putea la fel de bine sa inlocuim animal cu pet, x sau blah. Dar, in acest caz, denumirea parametrului animal ofera celui care citeste codul nostru un pic de context, astfel incat sa nu fie nevoit sa ghiceasca ce va contine animal.
+            </p>
+
+            <p>
+                Prin plasarea lui animal in interiorul parantezelor functiei favoriteAnimal(), ii spunem JavaScript-ului ca vom trimite o anumita valoare functiei favoriteAnimal. Asta inseamna ca animal este doar un substitut pentru o valoare viitoare. Dar ce valoare transmitem?
+            </p>
+
+            <p>
+                Ultima linie, favoriteAnimal('Goat'), este locul in care apelam functia favoriteAnimal si transmitem valoarea 'Goat' in acea functie. Aici, 'Goat' este argumentul nostru. Ii spunem functiei favoriteAnimal: „Te rog sa trimiti 'Goat' functiei favoriteAnimal si sa folosesti 'Goat' oriunde apare substitutul 'animal'.” Datorita flexibilitatii oferite de utilizarea unui parametru, putem declara orice animal ca fiind preferatul nostru.
+            </p>
+
+            <p>
+                Aici este o diagrama pentru a te ajuta sa vizualizezi modul in care parametrii sunt transmisi unei functii si cum valorile sunt returnate din aceasta.
+            </p>
+
+            <img src="../../images/js-1.png" alt="js description" width="500" height="500">
+        
+            <p>
+                Observa faptul ca, apeland favoriteAnimal() in interiorul console.log() cu argumentul 'Goat', obtinem valoarea returnata a functiei, adica sirul "Goat is my favorite animal!", afisat in consola. Transmitem un apel de functie favoriteAnimal('Goat') ca argument intr-un alt apel de functie - log().
+            </p>
+
+            <p>
+                Pastreaza aceasta posibilitate in minte, deoarece vei transmite apeluri de functii ca argumente destul de des. Daca doar apelam functia fara sa folosim console.log pentru a afisa valoarea returnata, nimic nu ar aparea in consola, dar functia ar returna totusi acel sir.
+            </p>
+
+            <p>
+                Experimenteaza cu codul pe cont propriu si inlocuieste 'Goat' cu animalul tau preferat. Observi cum putem schimba argumentul in orice dorim? Incearca sa modifici animal atat in declaratia functiei, cat si in corpul acesteia. Ce se intampla cand faci asta?
+            </p>
+        </div>
+
+
+        <div class="buttons">
+            <a href="javascript-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="buc-vec.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

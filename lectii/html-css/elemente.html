@@ -3,9 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">    
+
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Elemente si Etichete</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+            <p>
+                HTML (HyperText Markup Language) defineste structura si continutul paginilor web.
+                Folosim elemente HTML pentru a crea toate paragrafele, titlurile, listele, imaginile si linkurile care
+                formeaza o pagina web obisnuita. In aceasta lectie, vom explora cum functioneaza elementele HTML.
+            </p>
+            <h2>
+                Elemente si etichete
+            </h2>
+            <p>Aproape toate elementele dintr-o pagina HTML sunt doar bucati de continut incadrate intre etichete HTML de deschidere si inchidere.</p>
+            
+            <p>Etichetele de deschidere ii spun browserului ca aici incepe un element HTML.
+            Ele sunt formate dintr-un cuvant-cheie incadrat intre paranteze unghiulare <>. De exemplu, o eticheta de deschidere pentru un paragraf arata asa:
+            <code> &lt;p&gt;</code>.</p>
+            
+            <p>Etichetele de inchidere ii spun browserului unde se termina un element.
+            Ele sunt aproape identice cu cele de deschidere, cu diferenta ca au o bara oblica (slash) inaintea cuvantului-cheie.
+            De exemplu, o eticheta de inchidere pentru un paragraf arata asa: <code>&lt;/p&gt;</code>. </p>
+            <p>Un element complet de paragraf arata asa:</p>
+            <code class="coding">
+                &lt;p&gt;sunt un paragraf&lt;/p&gt;
+            </code>
+            <p>
+                Hai sa luam pas cu pas ce se intampla:
+                <ul>
+                    <li><code>&lt;p&gt;</code> este eticheta de deschidere.</li>
+                    <li><code>sunt un paragraf</code> reprezinta continutul incadrat intre eticheta de deschidere si cea de inchidere.</li>
+                    <li><code>&lt;/p&gt;</code> este eticheta de inchidere.</li>
+                </ul>
+            </p>
+            <p>
+                Poti sa te gandesti la elemente ca la niste containere pentru continut.
+                Etichetele de deschidere si inchidere spun browserului ce tip de continut se afla in interior.
+                Browserul foloseste aceste informatii pentru a sti cum sa interpreteze si sa afiseze continutul.
+            </p>
+            <p>
+                HTML contine o lista foarte mare de etichete predefinite pe care le poti folosi pentru a crea tot felul de elemente diferite.
+                Este important sa folosesti etichetele corecte pentru continutul tau.
+                Alegerea potrivita a etichetelor poate avea un impact semnificativ asupra a doua aspecte ale site-ului tau: cum este clasat in
+                motoarele de cautare si cat de accesibil este pentru utilizatorii care folosesc tehnologii asistive, cum ar fi cititoarele de ecran.
+            </p>
+            <h2>
+                Elemente vid
+            </h2>
+            <p>
+                Unele elemente HTML nu au o eticheta de inchidere.
+                Aceste elemente au doar o singura eticheta, cum ar fi: <code>&lt;br&gt;</code> sau <code>&lt;img&gt;</code>. Ele sunt cunoscute drept elemente vid
+                deoarece sunt goale, nu contin nimic in interior. Fara o eticheta de inchidere, ele nu pot incadra continut asa cum fac alte etichete.
+            </p>
+            <p>
+                Este posibil sa le mai vezi mentionate si ca etichete autoinchise.
+                Dar acestea sunt tot elemente vid, doar ca au o bara oblica (/) la final, cum ar fi: <code>&lt;br /&gt;</code> sau <code>&lt;img /&gt;</code>.
+                Vei intalni destul de des aceste etichete autoinchise, din motive istorice. Browserele le vor afisa corect,
+                insa cea mai recenta versiune a specificatiei HTML descurajeaza folosirea lor si le considera invalide.
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="file.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

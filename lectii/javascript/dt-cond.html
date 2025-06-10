@@ -3,9 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/js-neon.svg" alt="js logo">
+            </div>
+
+            <div class="text">
+                <h1>Tipuri de date si conditii</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Introducere Exista cateva tipuri de date extrem de comune pe care le vei intalni in JavaScript, iar aceste lectii despre fundamente iti vor oferi o baza solida in toate acestea. Totusi, inainte sa incepem sa exploram in detaliu, citeste <a href="https://javascript.info/types">acest rezumat despre cele mai comune tipuri de date din JavaScript</a>.
+            </p>
+
+            <h2>
+                Strings (siruri)
+            </h2>
+
+            <p>
+                In functie de tipul de munca pe care il faci, s-ar putea sa lucrezi mai mult cu bucati de text decat cu numere. Un sir este o bucata de text... si reprezinta un element fundamental al limbajului.
+
+                <ol>
+                    <li>Citeste si scrie cod impreuna cu <a href="https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/Strings">acest tutorial MDN despre siruri</a> in JavaScript. Sare peste sectiunea Concatenation in context, deoarece acopera concepte pe care le vom studia intr-o lectie ulterioara despre manipularea DOM-ului.</li>
+
+                    <li>Parcurge <a href="https://www.w3schools.com/js/js_string_methods.asp">lectia W3Schools despre metodele sirurilor</a> pentru a afla mai multe despre ce poti face cu sirurile.</li>
+                    
+                    <li>Timp de putin vocabular: o metoda este o functionalitate incorporata in limbaj sau in tipuri de date specifice. In <a href="https://www.w3schools.com/js/js_string_methods.asp">lectia W3Schools despre metodele sirurilor</a>, ai invatat despre cateva metode care pot fi utilizate pe siruri, cum ar fi replace si slice. <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String">Documentatia MDN pentru siruri</a> ofera o referinta exhaustiva pentru multe alte metode incorporate. Nu este necesar sa le memorezi, dar documentatia va fi o referinta foarte utila de consultat, asa ca salveaz-o!</li>
+                </ol>
+            </p>
+
+            <h2>
+                Conditii (conditionale)
+            </h2>
+
+            <p>
+                Acum incepe partea distractiva... Pana acum, nu am facut prea multe cu programarea noastra pe care nu le-ai putea face cu abilitati matematice de baza. Sigur, i-am spus calculatorului cum sa faca matematica, ceea ce o face mai rapida, dar esenta programarii este sa invatam calculatorul cum sa ia decizii pentru a face lucruri mai complexe. Conditionalele sunt modul in care realizam acest lucru.
+
+                <ol>
+                    <li>Primul pas in invatarea despre conditionale este sa te asiguri ca ai o intelegere solida a <a href="https://javascript.info/comparison">comparatiilor</a>.</li>
+
+                    <li>W3Schools are, de asemenea, o lectie despre <a href="https://www.w3schools.com/js/js_if_else.asp">conditionale in JavaScript</a>.</li>
+                    
+                    <li>JavaScript.info are un <a href="http://javascript.info/logical-operators">tutorial bun despre operatori logici</a>. Un mic avertisment in legatura cu sarcinile acestei lectii: vor exista intrebari in care vei vedea alert() cu un numar sau un sir in interiorul parantezelor. Ce se intampla aici va fi discutat mai tarziu in curriculum. Unele dintre raspunsuri s-ar putea sa nu aiba sens acum, dar sunt corecte si le vei intelege pe masura ce avansezi in curriculum. Nu iti face prea multe griji in legatura cu asta acum!</li>
+
+                    <li><a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/conditionals">Articolul MDN despre conditionale</a> intareste conceptul si ofera cateva exemple interesante despre cum le poti folosi la construirea site-urilor web.</li>
+
+                    <li><a href="http://javascript.info/ifelse">Lectia JavaScript.info despre if/else</a> acopera acelasi concept de baza (citeste-o ca o recapitulare!) si, mai important, ofera obisnuitele "sarcini" la sfarsitul paginii.</li>
+
+                    <li>Invata despre <a href="https://javascript.info/switch">declaratia switch</a>, care este utila atunci cand ai mai multe conditii.</li>
+                </ol>
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="javascript-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="functions.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

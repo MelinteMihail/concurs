@@ -3,9 +3,473 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Linkuri si Imagini</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Linkurile sunt una dintre caracteristicile cheie ale HTML. Ele ne permit sa facem legaturi catre alte pagini HTML de pe web. De fapt, acesta este motivul pentru care se numeste web.
+            </p>
+
+            <p>
+                In aceasta lectie, vom invata cum sa cream linkuri si sa adaugam un plus de atractivitate vizuala site-urilor noastre prin incorporarea imaginilor.
+            </p>
+
+            <h2>
+                Pregatire
+            </h2>
+
+            <p>
+                Pentru a exersa utilizarea linkurilor si imaginilor pe parcursul acestei lectii, avem nevoie de un proiect HTML cu care sa lucram.
+            </p>
+
+            <p>
+                Creeaza un nou director numit links-and-images. In acel director, creeaza un nou fisier numit <code>index.html</code>. Deschide fisierul in VS Code si completeaza structura HTML obisnuita. In final, adauga urmatorul h1 in corpul paginii:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;h1&gt;Homepage&lt;/h1&gt;
+                </code>
+            </pre>
+
+            <h2>
+                Elemente ancora
+            </h2>
+
+            <p>
+                Pentru a crea un link in HTML, folosim elementul ancora. Un element ancora este definit prin incadrarea textului sau a unui alt element HTML pe care dorim sa-l transformam in link cu un tag <code>&lt;a&gt;</code>.
+            </p>
+
+            <p>
+                Adauga urmatorul cod in corpul paginii <code>index.html</code> pe care am creat-o si deschide-l in browser:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;a&gt;About Youtube&lt;/a&gt;
+                </code>
+            </pre>
+
+            <p>
+                Probabil ai observat ca apasarea pe acest link nu face nimic. Acest lucru se intampla deoarece un tag <code>&lt;a&gt;</code> singur nu stie unde vrem sa facem legatura. Trebuie sa ii indicam o destinatie. Facem acest lucru folosind un atribut HTML.
+            </p>
+
+            <p>
+                Un atribut HTML ofera informatii suplimentare unui element HTML si este plasat intotdeauna in tag-ul de deschidere al elementului. Un atribut este de obicei format din doua parti: un nume si o valoare; totusi, nu toate atributele necesita o valoare. In cazul nostru, trebuie sa adaugam un atribut href (hypertext reference) in tag-ul de deschidere al ancorei. Valoarea atributului href este destinatia catre care dorim ca linkul sa duca.
+            </p>
+
+            <p>
+                Adauga urmatorul atribut href la elementul ancora pe care l-am creat anterior si incearca sa apesi pe el din nou. Nu uita sa dai refresh browserul pentru ca modificarile sa fie aplicate.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;a href="https://en.wikipedia.org/wiki/YouTube"&gt;About Youtube&lt;/a&gt;
+                </code>
+            </pre>
+
+            <p>
+                Implicit, orice text incadrat de un tag <code>&lt;a&gt;</code> fara un atribut href va arata ca text simplu. Daca atributul href este prezent, browserul va atribui textului o culoare albastra si il va sublinia pentru a indica faptul ca este un link.
+            </p>
+
+            <p>
+                Merita mentionat ca poti folosi tag-uri ancora pentru a face legaturi catre orice tip de resursa de pe internet, nu doar catre alte documente HTML. Poti face legaturi catre videoclipuri, fisiere pdf, imagini si asa mai departe, dar in majoritatea cazurilor vei face legaturi catre alte documente HTML.
+            </p>
+
+            <h2>
+                Deschiderea linkurilor intr-o fila noua
+            </h2>
+
+            <p>
+                Metoda prezentata mai sus deschide linkurile in aceeasi fila ca pagina web care le contine. Acesta este comportamentul implicit al majoritatii browserelor si poate fi schimbat destul de usor. Tot ce avem nevoie este un alt atribut: atributul target.
+            </p>
+
+            <p>
+                In timp ce href specifica destinatia linkului, target specifica unde va fi deschisa resursa linkuita. Daca nu este prezent, atunci, implicit, va prelua valoarea _self, ceea ce deschide linkul in fila curenta. Pentru a deschide linkul intr-o fila sau fereastra noua (depinde de setarile browserului), il poti seta la _blank, astfel:
+            </p>
+
+            <code>
+            &lt;a href="https://en.wikipedia.org/wiki/YouTube" target="_blank" rel="noopener noreferrer"&gt;About Youtube&lt;/a&gt;
+            </code>
+
+            <p>
+                Probabil ai observat ca am strecurat atributul rel mai sus. Acest atribut este folosit pentru a descrie relatia dintre pagina curenta si documentul linkuit.
+            </p>
+
+            <p>
+                noopener: Valoarea noopener a atributului rel asigura ca un link deschis intr-o fila sau fereastra noua nu poate interactiona sau accesa pagina originala. Fara aceasta valoare, noua pagina poate utiliza JavaScript pentru a manipula pagina originala, ceea ce reprezinta un risc de securitate.
+            </p>
+
+            <p>
+                De exemplu: <a href="https://example.com/" target="_blank" rel="noopener noreferrer">„Open Example”</a>
+            </p>
+
+            <p>
+                In acest cod: target="_blank": deschide linkul intr-o fila noua. rel="noopener": impiedica fila noua sa acceseze pagina originala, asigurand securitatea.
+            </p>
+
+            <p>
+                Fara noopener, fila noua ar putea folosi JavaScript pentru a interactiona cu pagina originala, ceea ce nu este sigur. noreferrer: Valoarea noreferrer a atributului rel ofera atat confidentialitate, cat si securitate. Ea impiedica noua pagina sa afle de unde a venit utilizatorul (ascunzand referrer-ul) si include, de asemenea, comportamentul noopener, impiedicand noua pagina sa acceseze pagina originala.
+            </p>
+
+            <p>
+                De exemplu: <a href="https://example.com/" rel="noopener noreferrer">Visit Example”</a>
+            </p>
+
+            <p>
+                In acest exemplu: target="_blank": deschide linkul intr-o fila noua. rel="noreferrer": asigura ca noua pagina nu poate vedea adresa paginii de referinta (confidentialitate) si o impiedica sa acceseze pagina originala (securitate).
+            </p>
+
+            <p>
+                Prin utilizarea rel="noreferrer", obtii automat beneficiile atat ale confidentialitatii, cat si ale securitatii.
+            </p>
+
+            <p>
+                De ce avem nevoie de acest comportament suplimentar pentru deschiderea linkurilor in file noi? Din motive de securitate. Prevenirea accesului cauzata de noopener impiedica atacurile de tip phishing, in care linkul deschis poate modifica pagina web originala cu alta, pentru a pacali utilizatorii. Acest lucru se numeste tabnabbing. Adaugarea valorii noreferrer poate fi facuta daca nu vrei ca linkul deschis sa stie ca pagina ta web face legatura catre el.
+            </p>
+
+            <p>
+                Observa ca este posibil sa nu fie o problema daca uiti sa adaugi rel="noopener noreferrer", deoarece versiunile mai recente ale browserelor ofera securitate daca target="_blank" este prezent. Cu toate acestea, in conformitate cu bunele practici de programare si pentru a fi precaut, este recomandat sa asociezi intotdeauna target="_blank" cu rel="noopener noreferrer".
+            </p>
+
+            <h2>
+                Linkuri absolute si relative
+            </h2>
+
+            <h3>Linkuri absolute</h3>
+
+            <p>
+                In general, exista doua tipuri de linkuri pe care le vom crea:
+
+                <ul>
+                    <li>Linkuri catre pagini de pe alte site-uri de pe internet.</li>
+                    <li>Linkuri catre pagini aflate pe propriul nostru site web.</li>
+                </ul>
+            </p>
+
+            <p>
+                Linkuri absolute Linkurile catre pagini de pe alte site-uri de pe internet sunt numite linkuri absolute. Un link absolut tipic va fi format din urmatoarele parti: scheme://domain/path. Un link absolut va contine intotdeauna schema si domeniul destinatiei.
+            </p>
+
+            <p>
+                Deja am vazut un link absolut in actiune. Linkul pe care l-am creat anterior catre pagina Wikipedia a Youtube-ului a fost un link absolut, deoarece contine schema si domeniul.
+            </p>
+
+            <h3>Linkuri relative</h3>
+
+            <p>
+                Linkurile catre alte pagini din cadrul propriului nostru site web sunt numite linkuri relative. Linkurile relative nu includ numele domeniului, deoarece este o alta pagina din acelasi site, presupunandu-se ca domeniul va fi acelasi cu cel al paginii in care a fost creat linkul.
+            </p>
+
+            <p>
+                Linkurile relative includ doar calea fisierului catre cealalta pagina, in raport cu pagina pe care creezi linkul. Acest lucru poate parea abstract, asa ca sa vedem un exemplu concret.
+            </p>
+
+            <p>
+                In cadrul directorului links-and-images, creeaza un nou fisier HTML numit about.html si lipeste urmatorul cod in el:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        <&lt;title>Links and Images&lt;/title&gt;
+                    &lt;/head&gt;
+
+                    &lt;body>
+                        &lt;h1>About Page&lt;/h1&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+
+            <p>
+                Inapoi in pagina index, adauga urmatorul element ancora pentru a crea un link catre pagina about:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;body&gt;
+                        &lt;h1>Homepage&lt;/h1&gt;
+                        &lt;a href="https://en.wikipedia.org/wiki/YouTube">About Youtube&lt;/a&gt;
+
+                        &lt;a href="about.html">About&lt;/a&gt;
+                    &lt;/body&gt;
+
+                </code>
+            </pre>
+
+            <p>
+                Deschide fisierul index in browser si apasa pe linkul about pentru a te asigura ca totul este conectat corect. Apasarea pe link ar trebui sa duca la pagina about pe care tocmai am creat-o.
+            </p>
+
+            <p>
+                Acest lucru functioneaza deoarece paginile index si about sunt in acelasi director. Asta inseamna ca putem folosi numele sau (about.html) ca valoare pentru atributul href al linkului.
+            </p>
+
+            <p>
+                Dar, de obicei, vrem sa organizam mai bine directoarele site-ului nostru. In mod normal, am avea doar fisierul index.html in directorul radacina, iar toate celelalte fisiere HTML in propriul lor director.
+            </p>
+
+            <p>
+                Creeaza un director numit pages in interiorul directorului links-and-images si muta fisierul about.html in acest nou director.
+            </p>
+
+            <p>
+                Da refresh la pagina index in browser, apoi apasa pe linkul about. Acum va fi nefunctional. Acest lucru se intampla deoarece locatia fisierului about.html s-a schimbat.
+            </p>
+
+            <p>
+                Pentru a remedia aceasta problema, trebuie doar sa actualizam valoarea href a linkului about pentru a include directorul pages/, deoarece aceasta este noua locatie a fisierului about in raport cu fisierul index.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;body&gt;
+                        &lt;h1>Homepage&lt;/h1&gt;
+                        &lt;a href="pages/about.html">About&lt;/a&gt;
+                    &lt;/body&gt;
+                </code>
+            </pre>
+
+            <p>
+                Da refresh la pagina index in browser si incearca sa apesi din nou pe linkul about, ar trebui sa functioneze corect acum.
+            </p>
+
+            <p>
+                In multe cazuri, acest lucru va functiona fara probleme; totusi, poti intampina probleme neasteptate cu aceasta abordare. Adaugarea lui ./ inaintea linkului va preveni, in majoritatea cazurilor, astfel de probleme. Prin adaugarea lui ./, specifici in cod ca ar trebui sa inceapa cautarea fisierului/directorului relativ la directorul curent.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;body&gt;
+                        &lt;h1>Homepage&lt;/h1&gt;
+                        &lt;a href="./pages/about.html">About&lt;/a&gt;
+                    &lt;/body&gt;
+                </code>
+            </pre>
+
+            <h3>O metafora</h3>
+
+            <p>
+                Imagineaza-ti numele domeniului tau (town.com) ca fiind un oras, directorul in care este situat site-ul tau (/museum) ca un muzeu, iar fiecare pagina de pe site-ul tau ca o camera din muzeu (/museum/movie_room.html si /museum/shops/coffee_shop.html). Linkurile relative precum ./shops/coffee_shop.html sunt indicatii din camera actuala (camera de filme a muzeului /museum/movie_room.html) catre o alta camera (magazinul din muzeu). Pe de alta parte, linkurile absolute sunt indicatii complete care includ protocolul (https), numele domeniului (town.com) si calea de la acel domeniu (/museum/shops/coffee_shop.html): https://town.com/museum/shops/coffee_shop.html.
+            </p>
+
+            <h2>
+                Imagini
+            </h2>
+
+            <p>
+                Site-urile web ar fi destul de plictisitoare daca ar putea afisa doar text. Din fericire, HTML ofera o gama variata de elemente pentru afisarea diferitelor tipuri de media. Cel mai utilizat dintre acestea este elementul imagine.
+            </p>
+
+            <p>
+                Pentru a afisa o imagine in HTML, folosim elementul <code>&lt;img&gt;</code>. Spre deosebire de celelalte elemente pe care le-am intalnit, elementul <code>&lt;img&gt;</code> este un element vid. Asa cum am vazut mai devreme in curs, elementele vid nu necesita un tag de inchidere deoarece sunt, in mod natural, goale si nu contin niciun continut.
+            </p>
+
+            <p>
+                In loc sa incadreze continutul cu un tag de deschidere si unul de inchidere, acesta insereaza o imagine in pagina folosind un atribut src, care spune browserului unde este situat fisierul imaginii. Atributul src functioneaza in mod similar cu atributul href pentru tag-urile ancora. Poate insera o imagine folosind atat cai absolute, cat si relative.
+            </p>
+
+            <p>
+                De exemplu, utilizand o cale absoluta, putem afisa o imagine situata pe site-ul Wikipedia:
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="absolute-path-image" src="https://codepen.io/melmivxd/embed/OPVOQaZ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/OPVOQaZ">
+                absolute-path-image</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <p>
+                Pentru a afisa imagini pe site-ul tau web care sunt gazduite pe propriul server, poti folosi o cale relativa.
+            </p>
+
+            <p>
+                <ol>
+                    <li>Creeaza un nou director numit images in cadrul proiectului links-and-images.</li>
+                    <li>Apoi, <a href="https://unsplash.com/photos/Mv9hjnEUHR4/download?force=true&w=640">descarca imaginea</a> si mut-o in directorul images pe care tocmai l-am creat.</li>
+                    <li>Redenumeste imaginea in dog.jpg.</li>
+                </ol>
+            </p>
+
+            <p>
+                In final, adauga imaginea in fisierul index.html:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;body&gt;
+                        &lt;h1>Homepage&lt;/h1&gt;
+                        &lt;a href="https://en.wikipedia.org/wiki/YouTube">About Youtube&lt;/a&gt;
+
+                        &lt;a href="./pages/about.html">About&lt;/a&gt;
+
+                        &lt;img src="./images/dog.jpg"&gt;
+                    &lt;/body&gt;
+                </code>
+            </pre>
+
+            <p>
+                Salveaza fisierul index.html si deschide-l in browser pentru a vedea cainele in toata splendoarea lui
+            </p>
+
+            <h2>
+                Directoare parinte
+            </h2>
+
+            <p>
+                Ce se intampla daca vrem sa folosim imaginea cu cainele in pagina about? Mai intai, trebuie sa urcam un nivel, iesind din directorul pages in directorul parinte, pentru a putea accesa directorul images.
+            </p>
+
+            <p>
+                Pentru a naviga catre directorul parinte, trebuie sa folosim doua puncte in calea relativa a fisierului, astfel: ../. Sa vedem cum functioneaza acest lucru: in corpul fisierului about.html, adauga urmatoarea imagine sub titlul pe care l-am adaugat anterior:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;img src="../images/dog.jpg"&gt;
+                </code>
+            </pre>
+
+            <p>
+                Ce se intampla mai exact?
+
+                <ol>
+                    <li>Mai intai, mergem la directorul parinte al directorului pages, care este links-and-images.</li>
+                    <li>Apoi, din directorul parinte, putem intra in directorul images.</li>
+                    <li>In final, putem accesa fisierul dog.jpg.</li>
+                </ol>
+            </p>
+
+            <p>
+                Folosind metafora pe care am utilizat-o anterior, utilizarea ../ intr-o cale de fisier este asemanatoare cu iesirea din camera in care te afli in holul principal, pentru a putea merge intr-o alta camera.
+            </p>
+
+            <h2>
+                Atributul alt
+            </h2>
+
+            <p>
+                Pe langa atributul src, fiecare element imagine ar trebui sa aiba si un atribut alt (text alternativ).
+            </p>
+
+            <p>
+                Atributul alt este folosit pentru a descrie o imagine. Acesta va fi afisat in locul imaginii daca aceasta nu poate fi incarcata. De asemenea, este utilizat de cititoarele de ecran pentru a descrie imaginea utilizatorilor cu deficiente de vedere.
+            </p>
+
+            <p>
+                Asa arata exemplul logo-ului YouTube pe care l-am folosit anterior, avand inclus un atribut alt:
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="image-alt-attribute" src="https://codepen.io/melmivxd/embed/MYwOVba?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/MYwOVba">
+                image-alt-attribute</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <h2>
+                Atributele dimensiunii imaginii
+            </h2>
+
+            <p>
+                Desi nu sunt strict necesare, specificarea atributelor height (inaltime) si width (latime) in tag-urile de imagine ajuta browserul sa aranjeze pagina fara a provoca sarituri si clipiri ale continutului.
+            </p>
+
+            <p>
+                Este o buna practica sa specifici intotdeauna aceste atribute pentru fiecare imagine, chiar si atunci cand imaginea are dimensiunea corecta sau folosesti CSS pentru a o modifica.
+            </p>
+
+            <p>
+                Iata exemplul nostru de logo YouTube, cu atributele height si width incluse:
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="Image Height and Width Attributes" src="https://codepen.io/melmivxd/embed/Kwpyomw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/Kwpyomw">
+                Image Height and Width Attributes</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <div class="buttons">
+                <a href="html-css-course.html">
+                    <button class="btn">
+                        <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                        <p>Intoarce-te la Curs</p>
+                    </button>
+                </a>
+
+                <a href="html-quiz.html">
+                    <button class="btn">
+                        <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                        <p>Urmatoarea lectie</p>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

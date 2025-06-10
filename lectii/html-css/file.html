@@ -3,9 +3,350 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
+    <title>Crearea unei file HTML”</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Crearea unei file HTML</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>Introducere</h2>
+
+            <p>
+                Toate documentele HTML au aceeasi structura de baza (sau boilerplate), care trebuie sa fie prezenta inainte de a putea face ceva util. 
+                In aceasta lectie, vom explora diferitele parti ale acestui boilerplate si vom vedea cum se imbina toate intre ele.
+            </p>
+
+            <h2>Crearea unui fisier HTML</h2>
+
+            <p>Pentru a demonstra un boilerplate HTML, mai intai avem nevoie de un fisier HTML cu care sa lucram.</p>
+
+            <p>
+                Creeaza un folder nou pe calculatorul tau si numeste-l <code>html-boilerplate</code>. 
+                In interiorul acestui folder, creeaza un fisier nou si numeste-l <code>index.html</code>.
+            </p>
+
+            <p>
+                Vom folosi <code>Visual Studio Code</code> ca editor de text pentru a scrie si salva codul nostru HTML.
+                Este un editor gratuit si foarte popular, folosit de multi dezvoltatori web.
+            </p>
+
+            <p>
+                Probabil esti deja familiar cu multe tipuri de fisiere, cum ar fi doc, pdf sau fisiere imagine.
+            </p>
+
+            <p>
+                Pentru a spune calculatorului ca vrem sa cream un fisier HTML, trebuie sa adaugam extensia <code>.html</code> la numele fisierului, asa cum am 
+                facut cand am creat fisierul <code>index.html</code>.
+            </p>
+
+            <p>
+                Merita mentionat ca am numit fisierul nostru HTML <code>index</code>. 
+                Ar trebui intotdeauna sa numim fisierul HTML care va contine pagina principala a site-ului nostru <code>index.html</code>. 
+                Asta pentru ca serverele web cauta in mod implicit o pagina <code>index.html</code> atunci cand utilizatorii acceseaza site-ul, iar lipsa acesteia poate cauza probleme mari.
+            </p>
+
+            <h2>
+                DOCTYPE
+            </h2>
+
+            <p>
+                Fiecare pagina HTML incepe cu o declaratie doctype. 
+                Scopul doctype-ului este sa ii spuna browserului ce versiune de HTML ar trebui sa foloseasca pentru a afisa documentul. 
+                Cea mai recenta versiune de HTML este HTML5, iar doctype-ul pentru aceasta versiune este: <code>&lt;!DOCTYPE html&gt;</code>.
+            </p>
+            
+            <p>
+                Doctype-urile pentru versiunile mai vechi de HTML erau putin mai complicate. De exemplu, aceasta este declaratia doctype pentru HTML4:
+            </p>
+
+            <p>
+                <code>
+                        &lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;
+                </code>
+            </p>
+
+            <p>
+                Totusi, cel mai probabil nu vom dori niciodata sa folosim o versiune
+                mai veche de HTML, asa ca vom folosi intotdeauna &lt;!DOCTYPE html&gt;.
+            </p>
+
+            <p>
+                Deschide fisierul <code>index.html</code> creat mai devreme in editorul tau de text si 
+                adauga <code>&lt;!DOCTYPE html&gt;</code> pe prima linie a fisierului.
+            </p>
+
+            <h2>
+                Elementul HTML
+            </h2>
+
+            <p>
+                Dupa ce declaram doctype-ul, trebuie sa adaugam un element <code>&lt;html&gt;</code>. Acesta este cunoscut ca elementul 
+                radacina al documentului, ceea ce inseamna ca orice alt element din document va fi un descendent al acestuia.
+            </p>
+
+            <p>
+                Acest lucru devine mai important mai tarziu, atunci cand vom invata cum sa manipulam HTML-ul folosind JavaScript. 
+                Pentru moment, este suficient sa stii ca elementul <code>&lt;html&gt;</code> ar trebui sa fie inclus in orice document HTML.
+            </p>
+
+            <p>
+                Revenind la fisierul <code>index.html</code>, 
+                haide sa adaugam elementul <code>&lt;html&gt;</code> scriind etichetele de deschidere si inchidere corespunzatoare:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;/html&gt;
+                </code>
+            </pre>
+
+            <p>
+                Ai observat cuvantul <code>lang</code> aici? El reprezinta un atribut HTML care este asociat cu eticheta HTML respectiva, in acest caz, <code>&lt;html&gt;</code>. 
+                Atributele HTML ofera informatii suplimentare despre elementele HTML.
+            </p>
+
+            <h3>
+                Ce este atributul lang?
+            </h3>
+
+            <p>
+                Atributul <code>lang</code> specifica limba continutului text din acel element. 
+                Acest atribut este folosit in principal pentru a imbunatati accesibilitatea paginii web. 
+                El permite tehnologiilor asistive, cum ar fi cititoarele de ecran, sa se adapteze in functie de limba si sa redea pronuntia corecta.
+            </p>
+
+            <h2>
+                Elementul head
+            </h2>
+
+            <p>
+                Elementul <code>&lt;head&gt;</code> este locul in care punem informatii meta importante despre paginile noastre web si alte lucruri necesare pentru ca acestea sa se afiseze corect in browser. 
+                In interiorul elementului <code>&lt;head&gt;</code> nu ar trebui sa folosim niciun element care afiseaza continut pe pagina web.
+            </p>
+
+            <p>
+                In fisierul <code>index.html</code>, haide sa adaugam un element <code>&lt;head&gt;</code> care sa contina 
+                un element <code>&lt;meta&gt;</code> si un titlu (<code>&lt;title&gt;</code>). 
+                Elementul <code>&lt;head&gt;</code> se adauga in interiorul elementului <code>&lt;html&gt;</code> si 
+                trebuie sa fie intotdeauna primul element dupa eticheta de deschidere <code>&lt;html&gt;</code>:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!DOCTYPE html&gt;
+
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title>Prima mea pagina web&lt;/title&gt;
+                    &lt;/head&gt;
+                    &lt;/html&gt;
+
+                </code>
+            </pre>
+
+            <h3>
+                Elementul meta
+            </h3>
+
+            <p>
+                Ar trebui sa avem intotdeauna eticheta <code>&lt;meta&gt;</code> 
+                cu setarea charset pentru codificarea caracterelor paginii in interiorul elementului <code>&lt;head&gt;</code>: <code>&lt;meta charset="UTF-8"&gt;</code>.
+            </p>
+
+            <p>
+                Setarea codificarii este foarte importanta deoarece asigura afisarea corecta in browser a simbolurilor speciale si a caracterelor din diferite limbi.
+            </p>
+
+            <h3>
+                Elementul title
+            </h3>
+
+            <p>
+                Un alt element pe care ar trebui sa-l includem intotdeauna in sectiunea <code>&lt;head&gt</code>; a unui document HTML este elementul <code>&lt;title&gt;</code>:
+            </p>
+
+            <p>
+                <code>
+                    &lt;title&gt;Prima mea pagina web&lt;/title&gt;
+                </code>
+            </p>
+
+            <p>
+                Elementul <code>&lt;title&gt</code>; este folosit pentru a oferi o denumire usor de inteles paginii web, 
+                care este afisata in tab-ul browserului. 
+                De exemplu, daca te uiti acum la titlul tab-ului curent din browser, 
+                probabil vei vedea ceva de genul „Crearea unei file HTML”; acesta este titlul definit de elementul <code>&lt;title&gt;</code> din fisierul HTML.
+            </p>
+
+            <p>
+                Daca nu am include un element <code>&lt;title&gt;</code>, titlul paginii ar fi setat implicit la numele fisierului. In cazul nostru, acesta ar fi „index.html”, ceea ce nu este foarte util pentru utilizatori si ar ingreuna gasirea paginii daca sunt multe tab-uri deschise.
+            </p>
+
+            <p>
+                Exista multe alte elemente care pot fi incluse in sectiunea <code>&lt;head&gt;</code> a unui document HTML. Totusi, pentru moment este important sa cunosti doar cele doua prezentate aici. Vom introduce si alte elemente ale <code>&lt;head&gt;</code>-ului pe masura ce avansam in curs.
+            </p>
+
+            <h2>
+                Elementul body
+            </h2>
+
+            <p>
+                Elementul final necesar pentru a completa scheletul HTML este elementul <code>&lt;body&gt;</code>. Aici va fi tot continutul care va fi afisat utilizatorilor - textul, imaginile, listele, link-urile si asa mai departe.
+            </p>
+
+            <p>
+                Pentru a completa scheletul, adauga un element <code>&lt;body&gt;</code> in fisierul index.html. Elementul <code>&lt;body&gt;</code> se afla de asemenea in interiorul elementului <code>&lt;html&gt;</code> si este intotdeauna sub elementul <code>&lt;head&gt;</code>, astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Prima mea pagina web&lt;/title&gt;
+                    &lt;/head&gt;
+
+                    &lt;body&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </code>
+            </pre>
+
+            <h2>
+                Vizualizarea fisierelor HTML in browser
+            </h2>
+
+            <p>
+                Scheletul HTML din fisierul index.html este complet in acest moment, dar cum il poti vizualiza in browser? Exista cateva optiuni diferite:
+            </p>
+
+            <ol>
+                <li>
+                    Poti trage si plasa un fisier HTML din editorul tau de text direct in bara de adresa a browser-ului.
+                </li>
+
+                <li>
+                    Poti gasi fisierul HTML in sistemul tau de fisiere si apoi sa dai dublu click pe el. Astfel, fisierul se va deschide in browser-ul implicit al sistemului tau.
+                </li>
+
+                <li>
+                    Poti folosi terminalul pentru a deschide fisierul in browser:
+
+                    <ul>
+                        <li>Ubuntu: Navigheaza in directorul care contine fisierul si tasteaza <code>google-chrome index.html</code></li>
+                        <li>macOS: Navigheaza in directorul care contine fisierul si tasteaza <code>open ./index.html</code></li>
+                        <li>WSL: Navigheaza in directorul care contine fisierul si tasteaza <code>explorer.exe index.html</code>. Atentie, acest lucru va deschide fisierul in browser-ul implicit al sistemului.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <p>
+                Folosind una dintre metodele de mai sus, deschide fisierul index.html la care am lucrat. Vei observa ca ecranul este gol. Acest lucru se intampla pentru ca nu avem nimic in body care sa se afiseze.
+            </p>
+
+            <p>
+                Revenind la fisierul <code>index.html</code>, sa adaugam un titlu in interiorul body-ului si sa salvam fisierul:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang="en"&gt;
+                    &lt;head&gt;
+                        &lt;meta charset="UTF-8"&gt;
+                        &lt;title&gt;Prima mea pagina web&lt;/title&gt;
+                    &lt;/head&gt;
+
+                    &lt;body&gt;
+                        &lt;h1&gt;Hello World!&lt;/h1&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+
+                </code>
+            </pre>
+
+            <p>
+                Acum, daca dai refresh la pagina in browser, ar trebui sa vezi modificarile aplicate, iar titlul „Hello World!” va fi afisat.
+            </p>
+
+            
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="text.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

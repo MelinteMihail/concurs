@@ -3,9 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>CSS Box Model</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Acum ca intelegi sintaxa de baza a HTML si CSS, este timpul sa devenim seriosi. Cele mai importante abilitati pe care trebuie sa le stapanesti in CSS sunt pozitionarea si layout-ul. Schimbarea fonturilor si culorilor este o abilitate esentiala, dar a putea plasa elementele exact unde doresti pe o pagina web este si mai crucial. La urma urmei, cate pagini web poti gasi unde fiecare element este pur si simplu stivuit unul peste altul?
+            </p>
+
+            <p>
+                Invatarea modului de pozitionare a elementelor pe o pagina web nu este dificila odata ce intelegi cateva concepte cheie. Din pacate, multi cursanti trec rapid prin HTML si CSS pentru a ajunge la JavaScript si sfarsesc prin a omite aceste concepte fundamentale. Acest lucru duce la frustrare si durere (si gif-uri amuzante), deoarece toate abilitatile de JavaScript din lume sunt inutile daca nu poti plasa elementele exact unde trebuie pe pagina. Asadar, cu acest lucru in minte, sa incepem!
+            </p>
+
+            <h2>
+                Box model
+            </h2>
+
+            <p>
+                Primul concept important pe care trebuie sa-l intelegi pentru a avea succes in CSS este modelul casetei. Nu este complicat, dar daca il ignori acum, vei avea multe frustrari mai tarziu.
+            </p>
+
+            <p>
+                Fiecare element de pe o pagina web este o caseta dreptunghiulara. Aceste casete pot contine alte casete in interiorul lor si pot fi asezate una langa alta. Poti obtine o idee generala despre cum functioneaza acest lucru aplicand un contur fiecarui element de pe pagina astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    * {
+                        outline: 2px solid red;
+                    }
+                </code>
+            </pre>
+
+            <img src="../../images/box-model-1.png" alt="box-model png" class="text-image">
+
+            <p>
+                Poti folosi inspectorul browserului pentru a adauga CSS-ul de mai sus la aceasta pagina web, daca doresti, facand clic pe butonul „+” din coltul din dreapta sus al panoului „Styles” din fila „Elements”. Casete in casete!
+            </p>
+
+            <p>
+                OK, poate ca in imaginea de mai sus exista cateva cercuri... dar cand vine vorba de layout, ele se potrivesc impreuna ca niste casete dreptunghiulare, nu ca niste cercuri. In cele din urma, organizarea unei pagini web si pozitionarea tuturor elementelor inseamna deciderea modului in care vei incadra si stivui aceste casete.
+            </p>
+
+            <p>
+                Singura complicatie reala este ca exista multe modalitati de a manipula dimensiunea acestor casete si spatiul dintre ele, utilizand padding, border si margin. Articolele atribuite aprofundeaza acest concept, dar pe scurt:
+
+                <ul>
+                    <li>padding creste spatiul dintre marginea unei casete si continutul acesteia.</li>
+                    <li>border adauga spatiu (chiar daca este doar un pixel sau doi) intre margin si padding.</li>
+                    <li>margin creste spatiul dintre marginile unei casete si marginile casetelor adiacente.</li>
+                </ul>
+            </p>
+
+            <p>
+                Asigura-te ca studiezi diagramele cu atentie.
+            </p>
+
+            <img src="../../images/box-model-2.png" alt="box-model png" class="text-image">
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="block-inline.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

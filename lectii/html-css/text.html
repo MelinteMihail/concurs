@@ -3,9 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Text in HTML</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+            <p>
+                Majoritatea continutului de pe web este bazat pe text, asa ca vei avea nevoie sa lucrezi destul de mult cu elementele de text din HTML.
+            </p>
+            <p>
+                In aceasta lectie, vom invata despre elementele textuale pe care cel mai probabil le vei folosi cel mai des.
+            </p>
+            <h2>
+                Paragrafe
+            </h2>
+            <p>
+                Ce te-ai astepta sa afiseze urmatorul text pe o pagina HTML?
+            </p>
+            <pre>
+                <code class="coding">
+                    &lt;body&gt;
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                        nisi ut aliquip ex ea commodo consequat.
+                    &lt;/body&gt;
+                </code>
+            </pre>
+            <p>
+                Pare a fi doua paragrafe de text, asa ca probabil te-ai astepta sa fie afisate ca atare.
+                Totusi, nu este cazul, dupa cum vezi in exemplul de mai jos:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="no-paragraphs-example" src="https://codepen.io/melmivxd/embed/ogXoxdB?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/ogXoxdB">
+                no-paragraphs-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <p>
+                Cand browser-ul intalneste linii noi asa in HTML-ul tau, le va comprima intr-un singur spatiu.
+                Rezultatul acestei comprimari este ca tot textul va fi lipit intr-un singur rand lung.
+            </p>
+            <p>
+                Daca vrem sa cream paragrafe in HTML, trebuie sa folosim elementul de paragraf, care adauga o linie noua dupa fiecare paragraf. Un element de paragraf este definit prin incadrarea continutului de text intre etichetele <code>&lt;p&gt;</code> si <code>&lt;/p&gt;</code>.
+            </p>
+            <p>
+                Modificand exemplul nostru anterior pentru a folosi elemente de paragraf rezolva problema:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="pargraph-example" src="https://codepen.io/melmivxd/embed/raVYeoV?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/raVYeoV">
+                pargraph-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <h2>
+                Titluri
+            </h2>
+            <p>
+                Titlurile sunt diferite de alte elemente textuale HTML: ele sunt afisate mai mare si mai ingrosat decat alte texte pentru a semnifica faptul ca sunt titluri.
+            </p>
+            <p>
+                Exista 6 niveluri diferite de titluri, incepand de la <code>&lt;h1&gt;</code> pana la <code>&lt;h6&gt;</code>. Numarul din interiorul unei etichete de titlu reprezinta nivelul acelui titlu. Cel mai mare si mai important titlu este h1, in timp ce h6 este cel mai mic titlu de la cel mai jos nivel.
+            </p>
+            <p>
+                Titlurile sunt definite in mare masura ca si paragrafele. De exemplu, pentru a crea un titlu h1, invelim textul titlului nostru intr-o eticheta <code>&lt;h1&gt;</code>.
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-headings-example" src="https://codepen.io/melmivxd/embed/gbpXrEK?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/gbpXrEK">
+                html-headings-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <p>
+                Folosirea corecta a nivelului de titlu este importanta deoarece nivelurile ofera o ierarhie continutului. Un titlu h1 ar trebui sa fie folosit intotdeauna pentru titlul paginii generale, iar titlurile de nivel inferior ar trebui utilizate pentru continutul din sectiuni mai mici ale paginii.
+            </p>
+            <h2>
+                Elementul strong
+            </h2>
+            <p>
+                Elementul <code>&lt;strong&gt;</code> face textul ingrosat. De asemenea, marcheaza semantic textul ca fiind important; acest lucru afecteaza instrumentele, cum ar fi cititoarele de ecran, pe care utilizatorii cu deficiente vizuale se bazeaza pentru a utiliza site-ul web. Tonul vocii pe unele cititoare de ecran se va schimba pentru a comunica importanta textului dintr-un element strong. Pentru a defini un element strong, incadram continutul textului intr-un tag <code>&lt;strong&gt;</code>.
+            </p>
+            <p>
+                Poti folosi strong de unul singur:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-single-strong-example" src="https://codepen.io/melmivxd/embed/RNPjamQ?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/RNPjamQ">
+                html-single-strong-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <p>
+                Dar probabil vei folosi elementul <code>&lt;strong&gt;</code> mult mai des in combinatie cu alte elemente de text, asa cum este exemplul urmator:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-strong-with-paragraph-exmample" src="https://codepen.io/melmivxd/embed/WbvXwBm?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/WbvXwBm">
+                html-strong-with-paragraph-exmample</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <p>
+                Uneori vei dori sa faci textul ingrosat fara a-i atribui o semnificatie importanta. Vei invata cum sa faci acest lucru in lectiile de CSS mai tarziu in curriculum.
+            </p>
+            <h2>
+                Elementul em
+            </h2>
+            <p>
+                Element em Elementul <code>&lt;em&gt;</code> face textul italic. De asemenea, plaseaza semantic accent pe text, ceea ce poate afecta din nou lucruri precum cititoarele de ecran. Pentru a defini un element accentuat, incadreaza continutul textului intr-un tag <code>&lt;em&gt;</code>.
+            </p>
+            <p>
+                Pentru a folosi <code>&lt;em&gt;</code> de unul singur:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-single-em-example" src="https://codepen.io/melmivxd/embed/bNdYpPz?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/bNdYpPz">
+                html-single-em-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <p>
+                La fel ca elementul <code>&lt;strong&gt;</code>, vei folosi cel mai adesea elementul <code>&lt;em&gt;</code> impreuna cu alte elemente de text:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-em-with-paragraph-example" src="https://codepen.io/melmivxd/embed/WbvXwVW?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/WbvXwVW">
+                html-em-with-paragraph-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <h2>
+                Nesting si indentare
+            </h2>
+            <p>
+                Probabil ai observat ca in toate exemplele din aceasta lectie, indentam orice elemente care sunt incluse in alte elemente.
+                Acest proces se numeste cuibare elemente (nesting).
+            </p>
+            <p>
+                Atunci cand cuibarim elemente in cadrul altor elemente, cream o relatie de tip parinte-copil intre ele. Elementele cuibarite sunt copii, iar elementul in care sunt cuibarite este parintele.
+            </p>
+            <p>In exemplul urmator, elementul <code>&lt;body&gt;</code> este parintele, iar paragraful este copilul:</p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-nesting-parent-child" src="https://codepen.io/melmivxd/embed/YPXEWKY?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/YPXEWKY">
+                html-nesting-parent-child</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <p>
+                La fel ca in relatiile umane, elementele parinte din HTML pot avea multi copii. Elementele aflate la acelasi nivel de cuibare sunt considerate a fi frati.
+            </p>
+            <p>
+                De exemplu, cele doua paragrafe din codul urmator sunt frati, deoarece ambele sunt copii ale tag-ului <code>&lt;body&gt;</code> si sunt la acelasi nivel de cuibare unul fata de celalalt:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-nesting-siblings" src="https://codepen.io/melmivxd/embed/MYwOeWw?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/MYwOeWw">
+                html-nesting-siblings</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+            <p>
+                Folosim indentarea pentru a face nivelul de cuibare clar si usor de citit pentru noi insine si pentru alti dezvoltatori care vor lucra cu HTML-ul nostru in viitor. In exemplele noastre, am indentat orice element copil cu doua spatii per nivel de cuibare.
+            </p>
+            <p>
+                Relatiile de tip parinte, copil si frate intre elemente vor deveni mult mai importante mai tarziu, cand vom incepe sa stilizam HTML-ul cu CSS si sa adaugam comportament cu JavaScript. Deocamdata, insa, este important doar sa cunoastem distinctia dintre modul in care sunt relationate elementele si terminologia utilizata pentru a descrie aceste relatii.
+            </p>
+            <h2>
+                Comentariile HTML
+            </h2>
+            <p>
+                Comentariile HTML nu sunt vizibile pentru browser; ele ne permit sa comentam codul astfel incat alti dezvoltatori sau noi insine, in viitor, sa le putem citi si sa obtinem un context despre ceva ce ar putea sa nu fie clar in cod.
+            </p>
+            <p>
+                Pentru a scrie un comentariu HTML, trebuie doar sa incadram comentariul intre tag-urile <code>&lt;!--</code> si <code>--&gt;</code>. De exemplu:
+            </p>
+            <iframe height="300" style="width: 100%;" scrolling="no" title="html-comments-example" src="https://codepen.io/melmivxd/embed/qEdVNBj?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/qEdVNBj">
+                html-comments-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="lists.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

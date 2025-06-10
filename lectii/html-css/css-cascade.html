@@ -3,9 +3,295 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>CSS Cascade</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+            <p>
+                In lectia anterioara, am acoperit sintaxa de baza a CSS si selectorii. Acum, este timpul sa combinam cunostintele despre selectori cu „C-ul” din CSS – cascada.
+            </p>
+            <h2>
+                CSS Cascade
+            </h2>
+            <p>
+                Uneori, regulile CSS pot intra in conflict unele cu altele, ceea ce duce la rezultate neasteptate. „Dar am vrut ca aceste paragrafe sa fie albastre, de ce sunt rosii ca celelalte paragrafe?!” Chiar daca poate fi frustrant, este important sa intelegi ca CSS nu actioneaza impotriva dorintelor tale—el doar executa exact ceea ce ii spui sa faca. O exceptie sunt stilurile implicite furnizate de browsere, care pot varia de la un browser la altul si care pot cauza distante mari intre elemente sau aspecte specifice ale butoanelor, chiar daca nu ai scris nicio regula CSS pentru ele.
+            </p>
+            <p>
+                Deci, daca te confrunti cu un comportament neasteptat, cel mai probabil este din cauza acestor stiluri implicite, a unei intelegeri gresite a unei proprietati CSS sau a acestui mic concept numit „cascada”.
+            </p>
+            <p>
+                Cascada CSS decide ce reguli sunt aplicate efectiv in HTML. Exista mai multi factori pe care cascada ii utilizeaza pentru a determina acest lucru. Vom examina trei dintre acesti factori, care speram sa te ajute sa eviti acele momente frustrante de „Urasc CSS-ul”.
+            </p>
+            <p>
+                Specificitate O declaratie CSS mai specifica va avea prioritate fata de cele mai putin specifice. Stilurile inline, pe care le-am discutat in lectia anterioara, au cea mai mare specificitate in comparatie cu selectorii, iar fiecare tip de selector are propriul nivel de specificitate care influenteaza aplicarea regulilor. Alte selectoare contribuie la specificitate, dar ne vom concentra doar pe cele pe care le-am explorat pana acum:
+                <ul>
+                    <li>ID selectori (cei mai specifici)</li>
+                    <li>Selectori de clasa</li>
+                    <li>Selectori de tip</li>
+                </ul>
+            </p>
+            <p>
+                Specificitatea este luata in considerare doar atunci cand un element are mai multe declaratii conflictuale care il vizeaza—un fel de „desemnare a castigatorului” intre ele. Un selector ID va prevala intotdeauna asupra oricarui numar de selectori de clasa, un selector de clasa va prevala asupra oricarui numar de selectori de tip, iar un selector de tip va prevala asupra oricarui numar de selectori mai putin specifici. Daca nu exista o declaratie cu un selector de specificitate mai mare, o regula cu un numar mai mare de selectori de acelasi tip va avea prioritate fata de o alta regula cu mai putini selectori de acelasi tip.
+            </p>
+            <p>
+                Sa aruncam o privire la cateva exemple rapide pentru a vizualiza cum functioneaza specificitatea. Considera urmatorul cod HTML si CSS:
+            </p>
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+                    &lt;div class="main"&gt;
+                        &lt;div class="list subsection"&gt;Red text&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <pre>
+                <code class="coding">
+                    /* rule 1 */
+                    .subsection {
+                        color: blue;
+                    }
+                    /* rule 2 */
+                    .main .list {
+                        color: red;
+                    }
+                </code>
+            </pre>
+            <p>
+                In exemplul de mai sus, ambele reguli folosesc doar selectori de clasa, dar regula 2 este mai specifica deoarece utilizeaza mai multi selectori de clasa, astfel incat declaratia color: red; ar avea prioritate.
+            </p>
+            <p>
+                Acum, sa schimbam putin lucrurile:
+            </p>
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+                    &lt;div class="main"&gt;
+                        &lt;div class="list" id="subsection"&gt;Red text&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <pre>
+                <code class="coding">
+                    /* rule 1 */
+                    #subsection {
+                        color: blue;
+                    }
+                    /* rule 2 */
+                    .main .list {
+                        color: red;
+                    }
+                </code>
+            </pre>
+            <p>
+                In exemplul de mai sus, desi regula 2 are mai multi selectori de clasa decat selectori ID, regula 1 este mai specifica deoarece ID-ul are prioritate fata de clasa. In acest caz, declaratia color: blue; ar avea prioritate.
+            </p>
+            <p>
+                Si acum ceva putin mai complex:
+            </p>
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+                    &lt;div class="main"&gt;
+                        &lt;div class="list" id="subsection"&gt;Red text on yellow background&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <pre>
+                <code class="coding">
+                    /* rule 1 */
+                    #subsection {
+                        background-color: yellow;
+                        color: blue;
+                    }
+                    /* rule 2 */
+                    .main #subsection {
+                        color: red;
+                    }
+                </code>
+            </pre>
+            <p>
+                In acest ultim exemplu, prima regula foloseste un selector ID, in timp ce a doua regula combina un selector ID cu un selector de clasa. Prin urmare, niciuna dintre reguli nu foloseste un selector mai specific decat cealalta. Cascada verifica apoi numarul fiecarui tip de selector. Ambele reguli au un singur selector ID, dar regula 2 are si un selector de clasa in plus fata de selectorul ID, deci regula 2 are o specificitate mai mare!
+            </p>
+            <p>
+                Desi declaratia color: red; ar avea prioritate, declaratia background-color: yellow; ar fi aplicata in continuare, deoarece nu exista nicio declaratie conflictuala pentru aceasta.
+            </p>
+            <pre>
+                <code class="coding">
+                    /* rule 1 */
+                    .class.second-class {
+                        font-size: 12px;
+                    }
+                    /* rule 2 */
+                    .class .second-class {
+                        font-size: 24px;
+                    }
+                </code>
+            </pre>
+            <p>
+                Aici, atat regula 1, cat si regula 2 au aceeasi specificitate. Regula 1 foloseste un selector inlantuit (fara spatiu), iar regula 2 foloseste un descendant combinator (cu spatiu). Dar ambele reguli au doua clase, iar simbolul combinatorului in sine nu adauga specificitate.
+            </p>
+            <pre>
+                <code class="coding">
+                    /* rule 1 */
+                    .class.second-class {
+                        font-size: 12px;
+                    }
+                    /* rule 2 */
+                    .class > .second-class {
+                        font-size: 24px;
+                    }
+                </code>
+            </pre>
+            
+            <p>
+                Acest exemplu arata acelasi lucru. Chiar daca regula 2 foloseste un combinator copil (`>`), acest lucru nu modifica valoarea specificitatii. Ambele reguli au in continuare doua clase, deci au aceleasi valori de specificitate.
+            </p>
+            <pre>
+                <code class="coding">
+                    /* rule 1 */
+                    * {
+                        color: black;
+                    }
+                    /* rule 2 */
+                    h1 {
+                        color: orange;
+                    }
+                </code>
+            </pre>
+            <p>
+                In acest exemplu, regula 2 ar avea o specificitate mai mare, iar valoarea orange ar avea prioritate pentru acest element. Regula 2 foloseste un selector de tip, care are cea mai mica valoare de specificitate. Insa regula 1 foloseste selectorul universal (*), care nu are nicio valoare de specificitate.
+            </p>
+            <h3>
+                Mostenirea
+            </h3>
+            <p>
+                Mostenirea se refera la anumite proprietati CSS care, atunci cand sunt aplicate unui element, sunt mostenite de descendentii acelui element, chiar daca nu scriem explicit o regula pentru acei descendenti. Proprietatile legate de tipografie (color, font-size, font-family etc.) sunt de obicei mostenite, in timp ce majoritatea celorlalte proprietati nu sunt.
+            </p>
+            <p>
+                Exceptia de la aceasta regula apare atunci cand un element este vizat direct, deoarece acest lucru va avea intotdeauna prioritate fata de mostenire.
+            </p>
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+                    &lt;div id="parent"&gt;
+                        &lt;div class="child"&gt;&lt;/div&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            <pre>
+                <code class="coding">
+                    /* styles.css */
+                    #parent {
+                        color: red;
+                    }
+                    .child {
+                        color: blue;
+                    }
+                </code>
+            </pre>
+            <p>
+                Desi elementul parinte are o specificitate mai mare datorita unui ID, elementul copil va avea stilul color: blue; aplicat, deoarece aceasta declaratie il vizeaza direct, in timp ce color: red; de la parinte este doar mostenit.
+            </p>
+            <h3>
+                Ordinea regulilor
+            </h3>
+            <p>
+                Ultimul factor, ultima etapa, criteriul de departajare suprem. Sa presupunem ca, dupa ce toti ceilalti factori au fost luati in considerare, exista inca mai multe reguli conflictuale care vizeaza un element. Cum decide cascada ce regula sa aplice?
+            </p>
+            <p>
+                Regula care a fost definita ultima este castigatoare.
+            </p>
+            <pre>
+                <code class="coding">
+                    /* styles.css */
+                    .alert {
+                        color: red;
+                    }
+                    .warning {
+                        color: yellow;
+                    }
+                </code>
+            </pre>
+            <p>
+                Pentru un element care are atat clasele `alert`, cat si `warning`, cascada ar parcurge toti ceilalti factori, inclusiv mostenirea (care nu este prezenta aici) si specificitatea (niciuna dintre reguli nu este mai specifica decat cealalta). Deoarece regula `.warning` a fost ultima definita si niciun alt factor nu a putut determina ce regula sa se aplice, aceasta este cea care se aplica elementului.
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="box-model.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

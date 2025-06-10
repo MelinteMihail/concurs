@@ -3,9 +3,298 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/js-neon.svg" alt="js logo">
+            </div>
+
+            <div class="text">
+                <h1>Bucle si Vectori</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Una dintre provocarile programarii este repetitia. Desi unele repetitii manuale sunt complet acceptabile, uneori dorim sa optimizam instructiunile repetate pentru a fi mai usor de citit. O alta provocare este gestionarea unor cantitati mari de date. De exemplu, daca vrei sa stochezi numele tuturor elevilor din clasa ta, cum ai face asta? Ai putea crea o variabila pentru fiecare nume, dar acest lucru ar fi obositor si ineficient. De asemenea, ar fi dificil de gestionat si actualizat. Ce se intampla daca vrei sa modifici sau sa accesezi numele mai tarziu?
+            </p>
+
+            <p>
+                in fericire, exista metode pentru a rezolva aceste probleme. In aceasta lectie, vei invata despre bucle, care sunt structuri de control ce permit executarea repetata a unui bloc de cod. Vei invata si despre tablouri (arrays), care sunt structuri de date ce pot stoca mai multe valori intr-o singura variabila. Tablourile sunt foarte utile pentru organizarea si manipularea unor cantitati mari de date. Bucle pot fi extrem de utile pentru efectuarea aceleiasi operatii asupra fiecarui element al unui tablou.
+            </p>
+
+            <h2>
+                Bucle
+            </h2>
+
+            <p>
+                Calculatoarele nu obosesc si sunt extrem de rapide! Din acest motiv, ele sunt potrivite pentru rezolvarea problemelor care implica efectuarea repetata a calculelor. In unele cazuri, un computer poate repeta o sarcina de mii sau chiar milioane de ori in doar cateva secunde, in timp ce unui om i-ar lua multe ore (desigur, viteza depinde de complexitatea calculului si de performanta computerului).
+            </p>
+
+            <p>
+                Pentru a repeta un set de instructiuni de mai multe ori, putem folosi o bucla. Parcurge urmatoarele resurse despre bucle. Unele dintre ele contin exemple care utilizeaza tablouri, pe care le vom explora mai detaliat in urmatoarea sectiune, dar pentru moment este suficient sa stim ca tablourile sunt doar liste de elemente.
+
+                <ol>
+                    <li>Citeste <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Looping_code">articolul MDN despre codul de buclare</a>. Este unul mai lung, dar asigura-te ca abordezi sectiunile „Active Learning” de la sfarsitul paginii.</li>
+
+                    <li>Din nou, aceleasi informatii, dar intr-un context usor diferit, in lectia <a href="http://javascript.info/while-for">„Loops: While and For” de pe JavaScript.info</a>. Asigura-te ca rezolvi exercitiile de la sfarsitul paginii. Cel mai bine inveti prin practica.</li>
+                </ol>
+            </p>
+
+            <h2>
+                Vectori (Tablouri)
+            </h2>
+
+            <p>
+                Sirurile si numerele pot fi elementele de baza ale programarii, dar pe masura ce scripturile tale devin mai complexe, vei avea nevoie de o metoda de gestionare a unor cantitati mari de date. Din fericire, JavaScript ofera cateva tipuri de date special concepute pentru acest scop. Un tablou este o colectie ordonata de elemente (siruri, numere sau alte tipuri de date). Vei observa ca unele dintre metodele de tablou prezentate in urmatoarele resurse au functii similare cu buclele. Uneori, vei avea nevoie de un control mai precis printr-o bucla reala, dar alteori o metoda de tablou adecvata face treaba la fel de bine si ofera un cod mai usor de citit.
+
+                <ol>
+                    <li><a href="https://www.youtube.com/watch?v=7W4pQQ20nJg">Acest curs rapid despre tablouri in JavaScript</a> ofera o prezentare generala a acestora in aproximativ 6 minute.</li>
+
+                    <li>Parcurge aceasta <a href="https://javascript.info/array">introducere despre tablouri pe JavaScript.info</a>. Nu este necesar sa faci exercitiile de la sfarsitul paginii.</li>
+                    
+                    <li>Citeste <a href="https://javascript.info/array-methods">ghidul metodei tablourilor de pe JavaScript.info</a> pentru o analiza mai profunda a unor metode suplimentare de tablou in JavaScript. De asemenea, nu trebuie sa faci exercitiile de la sfarsitul paginii; le vom aborda mai tarziu.</li>
+
+                    <li>Salveaza <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array">documentatia MDN despre tablouri</a>. Nu este necesar sa memorezi nimic din aceasta. Aici vei gasi toate proprietatile si metodele incorporate ale tablourilor, impreuna cu documentatia lor. Probabil vei reveni aici frecvent pe masura ce scrii cod si rezolvi probleme.</li>
+                </ol>
+            </p>
+
+            <h2>
+                Cateva exemple de magie cu tablouri
+            </h2>
+
+            <p>
+                Pe langa faptul ca sunt o metoda rapida si convenabila de a stoca date, tablourile au si un set de functii pentru manipularea acestor date in moduri foarte puternice. Pe masura ce capeti mai multa experienta cu aceste functii, vei incepe sa vezi moduri in care le poti folosi peste tot! Exista doar cateva dintre aceste functii, dar, dupa cum vei observa in curand, posibilitatile de utilizare sunt aproape nelimitate.
+            </p>
+
+            <p>
+                Ca exemplu, sa luam in considerare functia sumOfTripledEvens. Aceasta va:
+
+                <ul>
+                    <li>Primi un tablou.</li>
+                    <li>Pentru fiecare numar par, il va tripla.</li>
+                    <li>Apoi va insuma toate acele numere pare.</li>
+                </ul>
+            </p>
+
+            <pre>
+                <code class="coding">
+                    function sumOfTripledEvens(array) {
+                    let sum = 0;
+                    for (let i = 0; i < array.length; i++) {
+                        // Pas 1: Daca elementul este par
+                        if (array[i] % 2 === 0) {
+                        // Pas 2: Inmultim acest numar cu 3
+                        const tripleEvenNumber = array[i] * 3;
+
+                        // Pas 3: Adaugam numarul la total
+                        sum += tripleEvenNumber;
+                        }
+                    }
+                    return sum;
+                    }
+
+                </code>
+            </pre>
+
+            <h3>
+                Metoda map
+            </h3>
+
+            <p>
+                map este una dintre aceste functii. Ea asteapta un callback ca argument, ceea ce inseamna, intr-un mod simplificat, ca „Vreau sa transmit o alta functie ca argument functiei mele”.
+            </p>
+
+            <p>
+                Sa presupunem ca avem o functie addOne, care primeste num ca argument si returneaza acel numar crescut cu 1, si un tablou de numere, [1, 2, 3, 4, 5]. Sa spunem ca dorim sa incrementam toate aceste numere cu 1 folosind functia addOne.
+            </p>
+
+            <p>
+                In loc sa cream o bucla for si sa iteram manual prin tabloul de mai sus, putem folosi metoda de tablou map, care parcurge automat un tablou pentru noi. Nu trebuie sa facem munca suplimentara, ci doar sa transmitem functia pe care dorim sa o utilizam:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    function addOne(num) {
+                        return num + 1;
+                    }
+                    const arr = [1, 2, 3, 4, 5];
+                    const mappedArr = arr.map(addOne);
+                    console.log(mappedArr); // Afiseaza [2, 3, 4, 5, 6]
+                </code>
+            </pre>
+
+            <p>
+                map returneaza un nou tablou si nu modifica tabloul original.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    // Tabloul original nu a fost schimbat!
+                    console.log(arr); // Outputs [1, 2, 3, 4, 5]
+                </code>
+            </pre>
+
+            <p>
+                Utilizarea map in acest mod poate fi mai eleganta decat scrierea unei bucle for si iterarea prin tablou. Dar putem face chiar mai bine. Deoarece nu folosim addOne in alta parte si este o functie simpla, o putem defini direct in interiorul map folosind o functie sageata, astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    const arr = [1, 2, 3, 4, 5];
+                    const mappedArr = arr.map((num) => num + 1);
+                    console.log(mappedArr); // Afiseaza [2, 3, 4, 5, 6]
+                </code>
+            </pre>
+
+            <h3>
+                Metoda filter
+            </h3>
+
+            <p>
+                filter este oarecum similara cu map. Aceasta parcurge in continuare tabloul si aplica functia callback asupra fiecarui element. Totusi, in loc sa transforme valorile din tablou, returneaza un nou tablou in care fiecare element este inclus doar daca functia callback returneaza true pentru el.
+            </p>
+
+            <p>
+                Sa presupunem ca avem o functie isOdd care returneaza true daca un numar este impar sau false daca nu este.
+            </p>
+
+            <p>
+                Metoda filter asteapta ca functia callback sa returneze fie true, fie false. Daca returneaza true, valoarea este inclusa in rezultat. Daca returneaza false, nu este inclusa. Sa luam in considerare tabloul din exemplul anterior, [1, 2, 3, 4, 5]. Daca dorim sa eliminam toate numerele pare din acest tablou, putem folosi .filter() astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    function isOdd(num) {
+                        return num % 2 !== 0;
+                    }
+                    const arr = [1, 2, 3, 4, 5];
+                    const oddNums = arr.filter(isOdd);
+                    console.log(oddNums); // Afiseaza [1, 3, 5];
+                    console.log(arr); // Afiseaza [1, 2, 3, 4, 5], tabloul original nu este afectat
+
+                </code>
+            </pre>
+
+            <p>
+                <ul>
+                    <li>filter va parcurge arr si va transmite fiecare valoare functiei callback isOdd, una cate una.</li>
+                    <li>isOdd va returna true atunci cand valoarea este impara, ceea ce inseamna ca aceasta valoare va fi inclusa in rezultat.</li>
+                    <li>Daca este un numar par, isOdd va returna false si nu il va include in rezultatul final.</li>
+                </ul>
+            </p>
+
+            <h3>
+                Metoda reduce
+            </h3>
+
+            <p>
+                In cele din urma, sa presupunem ca dorim sa inmultim toate numerele din arr astfel: 1 * 2 * 3 * 4 * 5. Mai intai, ar trebui sa declaram o variabila total si sa o initializam cu 1. Apoi, am parcurge tabloul cu o bucla for si am inmulti totalul cu numarul curent.
+            </p>
+
+            <p>
+                Dar nu trebuie sa facem toate acestea manual; avem metoda reduce care face treaba pentru noi. La fel ca .map() si .filter(), aceasta asteapta o functie callback. Totusi, exista doua diferente esentiale fata de celelalte metode pentru tablouri:
+
+                <ul>
+                    <li>Functia callback primeste doua argumente in loc de unul. Primul argument este acumulatorul, care reprezinta valoarea curenta a rezultatului in acel moment al buclei. La prima iteratie, aceasta valoare va fi fie setata la initialValue (descris in punctul urmator), fie la primul element din tablou daca nu este furnizat initialValue. Al doilea argument al functiei callback este valoarea curenta, adica elementul aflat in procesul de iterare.</li>
+                    
+                    <li>reduce accepta si un initialValue ca al doilea argument optional (dupa functia callback), ceea ce ajuta atunci cand nu dorim ca valoarea initiala sa fie primul element din tablou. De exemplu, daca vrem sa adunam toate numerele dintr-un tablou, putem apela reduce fara initialValue, dar daca dorim sa adunam toate numerele si sa adaugam 10, putem seta initialValue la 10.</li>
+                </ul>
+            </p>
+
+            <pre>
+                <code class="coding">
+                    const arr = [1, 2, 3, 4, 5];
+                    const productOfAllNums = arr.reduce((total, currentItem) => {
+                        return total * currentItem;
+                    }, 1);
+                    console.log(productOfAllNums); // Afiseaza 120;
+                    console.log(arr); // Afiseaza [1, 2, 3, 4, 5]
+                </code>
+            </pre>
+
+            <p>
+                In functia de mai sus, noi:
+
+                <ul>
+                    <li>Transmitem o functie callback, care este (total, currentItem) => total * currentItem.</li>
+                    <li>Initializam total la 1 in al doilea argument.</li>
+                </ul>
+            </p>
+
+            <p>
+                Astfel, ceea ce face .reduce() este sa parcurga fiecare element din arr si sa aplice functia callback asupra lui. Aceasta actualizeaza total fara a modifica efectiv tabloul. Dupa ce procesul este finalizat, returneaza total.
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="javascript-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="js-quiz.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

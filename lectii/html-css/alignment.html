@@ -3,9 +3,171 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Aliniere</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Pana acum, tot ceea ce am explorat in Flexbox a folosit regula flex: 1 pe toate elementele flex, ceea ce face ca acestea sa creasca sau sa se micsoreze egal pentru a umple tot spatiul disponibil. Totusi, foarte des, acesta nu este efectul dorit. Flexbox este extrem de util si pentru aranjarea elementelor cu dimensiuni specifice.
+            </p>
+
+            <h2>
+                Aliniere
+            </h2>
+
+            <p>
+                Sa analizam un exemplu.
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="flex-alignment example" src="https://codepen.io/melmivxd/embed/myJpKJV?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/myJpKJV">
+                flex-alignment example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <p>
+                Ar trebui sa poti prezice ce se intampla daca aplici flex: 1 pe .item pana acum. Incearca-l inainte de a merge mai departe!
+            </p>
+
+            <p>
+                Adaugarea flex: 1 pe .item face ca fiecare element sa creasca pentru a umple tot spatiul disponibil. Dar ce se intampla daca vrem ca ele sa pastreze aceeasi latime, dar sa se distribuie diferit in interiorul containerului? Putem face acest lucru!
+            </p>
+
+            <p>
+                Elimina flex: 1 din .item si adauga justify-content: space-between pe .container. Aceasta modificare ar trebui sa ofere un rezultat similar cu acesta:
+            </p>
+
+            <img src="../../images/flex-5.png" alt="flex description 5">
+
+            <p>
+                justify-content aliniaza elementele de-a lungul axei principale. Exista mai multe valori pe care le poti folosi aici. Vei invata restul acestora in lectiile atribuite, dar pentru moment, incearca sa schimbi valoarea la center, ceea ce ar trebui sa centreze casetele pe axa principala.
+            </p>
+
+            <p>
+                Pentru a modifica pozitionarea elementelor pe axa secundara, foloseste align-items. Incearca sa pozitionezi casetele in centrul containerului adaugand align-items: center pe .container. Rezultatul dorit ar trebui sa arate astfel:
+            </p>
+
+            <img src="../../images/flex-6.png" alt="flex description 6">
+        
+            <p>
+                Deoarece justify-content si align-items se bazeaza pe axa principala si axa secundara a containerului tau, comportamentul lor se schimba atunci cand modifici flex-direction intr-un container flex. De exemplu, daca schimbi flex-direction la column:
+
+                <ul>
+                    <li>justify-content va alinea elementele vertical.</li>
+                    <li>align-items va alinea elementele orizontal.</li>
+                </ul>
+
+                Totusi, comportamentul cel mai frecvent este cel implicit:
+
+                <ul>
+                    <li>justify-content aliniaza orizontal (deoarece axa principala este orizontala).</li>
+                    <li>align-items aliniaza vertical.</li>
+                </ul>
+            </p>
+
+            <p>
+                Una dintre cele mai mari surse de confuzie pentru incepatori in Flexbox este schimbarea acestui comportament, asa ca merita sa fii atent la cum functioneaza!
+            </p>
+
+            <h3>
+                O caracteristica foarte utila in Flexbox este proprietatea gap. Aplicarea gap pe un container flex adauga un spatiu specificat intre elementele flex, similar cu adaugarea unui margin pe elementele individuale. gap este o proprietate relativ noua, asa ca nu apare in multe resurse inca. Totusi, functioneaza fiabil in toate browserele moderne, asa ca este sigura de utilizat si foarte practica! Adaugarea gap: 8px; la exemplul centrat de mai sus ar trebui sa produca urmatorul rezultat:
+            </h3>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="flex-alignment example 2" src="https://codepen.io/melmivxd/embed/XJbVYjo?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/XJbVYjo">
+                flex-alignment example 2</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <p>
+                Mai ai multe de invatat in lecturile de mai jos, dar in acest punct poti vedea clar cat de incredibil de util este Flexbox. Cu doar proprietatile pe care le-am acoperit pana acum, poti deja sa creezi layout-uri impresionante!
+            </p>
+
+            <p>
+                Ia-ti timp pentru a parcurge materialele. Vei gasi recapitularea unor concepte pe care le-am discutat, dar si explicatii mai aprofundate si cateva lucruri noi. Nu te stresa prea tare incercand sa memorezi fiecare detaliu—mai bine codeaza alaturi de exemple si incearca sa asimilezi cat mai bine toate posibilitatile oferite de Flexbox. Vei reveni la aceste resurse cand vei ajunge la exercitiile practice, iar asta este perfect normal. Cu cat folosesti mai mult aceste concepte, cu atat vor deveni mai intuitive pentru tine… si le vei folosi tot timpul.
+            </p>
+
+            <p>
+                Distractie placuta!
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="flex-quiz.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

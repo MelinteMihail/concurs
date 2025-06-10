@@ -3,9 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Axe in Flexbox</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                Sa vedem cum poate fi controlata orientarea elementelor dintr-un container flex folosind proprietatea flex-direction.
+            </p>
+
+            <h2>
+                Axe
+            </h2>
+
+            <p>
+                Cel mai derutant aspect al Flexbox este ca poate functiona atat orizontal, cat si vertical, iar anumite reguli se modifica in functie de directia in care lucrezi. Directia implicita pentru un container flex este orizontala (row), dar o poti schimba pe verticala (column). Poti specifica directia in CSS astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    .flex-container {
+                        flex-direction: column;
+                    }
+                </code>
+            </pre>
+
+            <p>
+                Indiferent de directia pe care o folosesti, trebuie sa te gandesti la containerele flex ca avand 2 axe: axa principala si axa secundara. Directia acestor axe se schimba atunci cand modifici flex-direction.
+            </p>
+
+            <p>
+                In majoritatea cazurilor:
+                <ul>
+                    <li>flex-direction: row → aseaza axa principala orizontal (stanga → dreapta).</li>
+                    <li>flex-direction: column → aseaza axa principala vertical (sus → jos).</li>
+                </ul>
+            </p>
+
+            <p>
+                Cu alte cuvinte, in primul nostru exemplu, am aplicat display: flex pe un <code>&lt;div&gt;</code> si acesta si-a aranjat copiii orizontal. Acesta este un exemplu al comportamentului implicit: flex-direction: row.
+            </p>
+
+            <p>
+                Urmatorul exemplu este foarte similar. Daca decomentezi linia flex-direction: column, acele <code>&lt;div&gt;</code>-uri se vor alinia vertical.
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="flex-direction example" src="https://codepen.io/melmivxd/embed/LEVemav?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/LEVemav">
+                flex-direction example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <p>
+                Un aspect important de remarcat aici este ca, in acest exemplu, flex-direction: column nu ar functiona corect daca am folosi sintaxa prescurtata flex: 1. Incearca acum (adica modifica valoarea flex pe linia flex: 1 1 auto;). Poti sa-ti dai seama de ce nu functioneaza daca folosim flex: 1? div-urile se prabusesc, desi au clar o inaltime definita acolo.
+            </p>
+
+            <p>
+                Motivul este ca sintaxa prescurtata flex extinde flex-basis la 0, ceea ce inseamna ca toate calculele pentru flex-grow si flex-shrink incep de la 0. div-urile goale au implicit o inaltime de 0, asa ca pentru ca elementele flex sa umple inaltimea containerului nu este nevoie sa aiba nicio inaltime predefinita.
+            </p>
+
+            <p>
+                Exemplul de mai sus a rezolvat aceasta problema prin specificarea flex: 1 1 auto, permitand elementelor flex sa respecte inaltimea lor data. Am fi putut rezolva problema si:
+
+                <ul>
+                    <li>adaugand o inaltime pe containerul .flex-container</li>
+                    <li>folosind flex-grow: 1 in loc de sintaxa prescurtata.</li>
+                </ul>
+            </p>
+
+            <p>
+                Un alt detaliu important: Cand schimbam flex-direction la column, flex-basis se refera la inaltime, nu la latime. In acest context, poate fi evident, dar este ceva de care trebuie sa fim constienti.
+            </p>
+
+            <p>
+                Ne-am abatut putin de la subiect… Vorbeam despre flex-direction si axe. Pe scurt:
+
+                <ul>
+                    <li>Comportamentul implicit este flex-direction: row, care aranjeaza elementele orizontal.</li>
+                    <li>Acest lucru functioneaza bine fara ajustari suplimentare in CSS, deoarece elementele de tip block au implicit latimea containerului parinte.</li>
+                    <li>Schimbarea la flex-direction: column adauga complexitate, deoarece elementele de tip block au implicit inaltimea continutului, iar in acest caz nu exista continut.</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="alignment.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

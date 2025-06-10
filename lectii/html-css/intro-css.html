@@ -3,9 +3,612 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Introducere in CSS</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                In lectia anterioara, ai invatat cum sa scrii HTML-ul care determina structura unei pagini web. Urmatorul pas este sa faci ca aceasta structura sa arate bine, adaugand stil, iar exact pentru acest lucru este destinat CSS. In urmatoarele lectii, ne vom concentra pe concepte fundamentale ale CSS, lucruri pe care toata lumea ar trebui sa le cunoasca de la inceput—fie ca abia incep sau au nevoie de o recapitulare.
+            </p>
+
+            <h2>
+                Sintaxa de baza
+            </h2>
+
+            <p>
+                La cel mai elementar nivel, CSS este format din diverse reguli. Aceste reguli sunt alcatuite dintr-un selector (vom discuta mai multe despre acesta mai tarziu) si o lista de declaratii separate prin punct si virgula, fiecare dintre acestea fiind compusa dintr-o pereche proprietate-valoare.
+            </p>
+
+            <img src="../../images/css-pic.jpg" alt="css code" class="text-image">
+
+            <h2>
+                Selectori
+            </h2>
+
+            <p>
+                Selectorii se refera la elementele HTML carora li se aplica regulile CSS; ei sunt ceea ce este efectiv „selectat” pentru fiecare regula. Subsectiunile urmatoare nu acopera toti selectorii disponibili, dar sunt de departe cei mai comuni si cei cu care ar trebui sa te familiarizezi mai intai.
+            </p>
+
+            <h3>
+                Selector universal
+            </h3>
+
+            <p>
+                Selectorul universal va selecta elemente de orice tip (adica din intregul document), de unde si numele „universal”, iar sintaxa pentru acesta este un simplu asterisc. In exemplul de mai jos, fiecare element ar avea stilul color: purple; aplicat.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    * {
+                        color: purple;
+                    }
+                </code>
+            </pre>
+
+            <h3>
+                Selectori de tip
+            </h3>
+
+            <p>
+                Un selector de tip (sau selector de element) va selecta toate elementele de un anumit tip, iar sintaxa este pur si simplu numele elementului:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+
+                    &lt;div&gt;Hello, World!&lt;/div&gt;
+                    &lt;div&gt;Hello again!&lt;/div&gt;
+                    &lt;p&gt;Hi...&lt;/p&gt;
+                    &lt;div>Okay, bye.&lt;/div&gt;
+
+                </code>
+            </pre>
+
+            <pre>
+                <code class="coding">
+                    /* styles.css */
+
+                    div {
+                        color: white;
+                    }
+
+                </code>
+            </pre>
+
+            <p>
+                Aici, toate cele trei <code>&lt;div&gt;</code> elemente ar fi selectate, in timp ce elementul <code>&lt;p&gt;</code> nu ar fi.
+            </p>
+
+            <h3>
+                Selectori de clasa
+            </h3>
+
+            <p>
+                Selectorii de clasa vor selecta toate elementele care au o anumita clasa, care este doar un atribut adaugat unui element HTML. Iata cum poti adauga o clasa unui tag HTML si sa o selectezi in CSS:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+
+                    &lt;div class="alert-text">Please agree to our terms of service.&lt;/div&gt;
+
+                </code>
+            </pre>
+
+            <pre>
+                <code class="coding">
+                    /* styles.css */
+
+                    .alert-text {
+                        color: red;
+                    }
+
+                </code>
+            </pre>
+
+
+            <p>
+                Observa sintaxa selectorilor de clasa: un punct urmat imediat de valoarea sensibila la majuscule a atributului class. Clasele nu trebuie sa fie specifice unui anumit element, astfel incat poti folosi aceeasi clasa pe cate elemente doresti.
+            </p>
+
+            <p>
+                Un alt lucru pe care il poti face cu atributul class este sa adaugi mai multe clase unui singur element, sub forma unei liste separate prin spatii, de exemplu: class="alert-text severe-alert". Deoarece spatiul este folosit pentru a separa numele claselor in acest mod, nu ar trebui sa utilizezi spatii pentru denumiri compuse din mai multe cuvinte; in schimb, foloseste o liniuta (-).
+            </p>
+
+            <h3>Selectori ID</h3>
+
+            <p>
+                Selectori ID Selectorii ID sunt similari cu selectorii de clasa. Ei selecteaza un element cu un anumit ID, care este un alt atribut pe care il adaugi unui element HTML. Principala diferenta intre clase si ID-uri este ca un element poate avea un singur ID. Acesta nu poate fi repetat pe o singura pagina si nu ar trebui sa contina spatii:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+
+                    &lt;div id="title">My Awesome 90's Page&lt;/div&gt;
+
+                </code>
+            </pre>
+
+            <pre>
+                <code class="coding">
+                    /* styles.css */
+
+                    #title {
+                        background-color: red;
+                    }
+
+                </code>
+            </pre>
+
+            <h3>
+                Selectorul de grupare
+            </h3>
+
+            <p>
+                Ce se intampla daca avem doua grupuri de elemente care impartasesc unele dintre declaratiile lor de stil?
+            </p>
+
+            <pre>
+                <code class="coding">
+                        .read {
+                            color: white;
+                            background-color: black;
+                            /* alte declaratii */
+                        }
+
+                        .unread {
+                            color: white;
+                            background-color: black;
+                            /* alte declaratii */
+                        }
+
+                </code>
+            </pre>
+
+            <p>
+                Atat selectorii .read cat si .unread impartasesc declaratiile color: white; si background-color: black;, dar altfel au mai multe declaratii unice. Pentru a reduce repetitia, putem grupa acesti doi selectori impreuna intr-o lista separata prin virgula:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    .read,
+                    .unread {
+                        color: white;
+                        background-color: black;
+                    }
+
+                    .read {
+                        /* alte declaratii */
+                    }
+
+                    .unread {
+                        /* alte declaratii */
+                    }
+
+                </code>
+            </pre>
+
+            <p>
+                Ambele exemple de mai sus (cu si fara grupare) vor avea acelasi rezultat, dar al doilea exemplu reduce repetitia declaratiilor si face mai usor de modificat fie color, fie background-color pentru ambele clase simultan.
+            </p>
+
+            <h3>
+                Inlantuirea selectorilor
+            </h3>
+
+            <p>
+                O alta modalitate de a folosi selectori este sa Ii Inlantuiesti Intr-o lista fara nicio separare. Sa presupunem ca avem urmatorul cod HTML:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;div&gt;
+                        &lt;div class="subsection header">Latest Posts&lt;/div&gt;
+                        &lt;p class="subsection preview">This is where a preview for a post might go.&lt;/p&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+
+            <p>
+                Avem doua elemente cu clasa subsection, care au unele stiluri unice, dar daca vrem sa aplicam o regula separata doar elementului care are si clasa header ca a doua clasa? Ei bine, putem Inlantui ambii selectori de clasa In CSS astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    .subsection.header {
+                        color: red;
+                    }
+                </code>
+            </pre>
+
+            <p>
+                Ceea ce face .subsection.header este ca selecteaza orice element care are atat clasa subsection, cat si clasa header. Observa ca nu exista spatiu Intre selectorii .subsection si .header. Aceasta sintaxa functioneaza practic pentru Inlantuirea oricarei combinatii de selectori, cu exceptia cazului In care sunt mai multi selectori de tip.
+            </p>
+
+            <p>
+                Aceasta poate fi folosita si pentru a Inlantui o clasa si un ID, asa cum se arata mai jos:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;div&gt;
+                        &lt;div class="subsection header"&gt;Latest Posts&lt;/div&gt;
+                        &lt;p class="subsection" id="preview"&gt;
+                            This is where a preview for a post might go.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+
+                </code>
+            </pre>
+
+            <p>
+                Poti lua cele doua elemente de mai sus si le poti combina astfel:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    .subsection.header {
+                        color: red;
+                    }
+
+                    .subsection#preview {
+                        color: blue;
+                    }
+                </code>
+            </pre>
+
+            <p>
+                In general, nu poti inlantui mai multi selectori de tip, deoarece un element nu poate fi simultan doua tipuri diferite. De exemplu, inlantuirea a doi selectori de tip precum div si p ar produce selectorul divp, care nu ar functiona, deoarece ar incerca sa gaseasca un element <divp>, care nu exista.
+            </p>
+
+            <h3>
+                Descendant combinator
+            </h3>
+
+            <p>
+                Combinatorii ne permit sa combinam mai multi selectori in moduri diferite fata de grupare sau inlantuire, deoarece arata o relatie intre selectori. Exista patru tipuri de combinatori in total, dar pentru moment ne vom concentra doar pe descendant combinator, care este reprezentat in CSS printr-un spatiu intre selectori. Un descendant combinator va selecta elementele care corespund ultimului selector doar daca acestea au un stramos (parinte, bunic etc.) care corespunde selectorului anterior.
+            </p>
+
+            <p>
+                De exemplu, .ancestor .child ar selecta un element cu clasa child daca acesta are un stramos cu clasa ancestor. O alta modalitate de a gandi acest lucru este ca child va fi selectat doar daca este imbricat in ancestor, indiferent de cat de adanca este aceasta imbricare. Arunca o privire rapida la exemplul de mai jos si vezi daca poti identifica care elemente ar fi selectate pe baza regulii CSS furnizate.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+
+                    &lt;div class="ancestor"&gt;
+                        &lt;!-- A --&gt;
+                        &lt;div class="contents"&gt;
+                            &lt;!-- B --&gt;
+                            &lt;div class="contents"&gt;&lt;!-- C --&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class="contents"&gt;&lt;!-- D --&gt;&lt;/div&gt;
+
+                </code>
+            </pre>
+
+            <pre>
+                <code class="coding">
+                    /* styles.css */
+
+                    .ancestor .contents {
+                        /* alte declaratii */
+                    }
+
+                </code>
+            </pre>
+
+            <p>
+                In exemplul de mai sus, primele doua elemente cu clasa contents (B si C) ar fi selectate, dar ultimul element (D) nu ar fi. Ai ghicit?
+            </p>
+
+            <p>
+                Nu exista cu adevarat o limita pentru numarul de combinatori pe care ii poti adauga unei reguli, asa ca .one .two .three .four ar fi complet valid. Aceasta ar selecta un element care are clasa four daca are un stramos cu clasa three, iar acel stramos are propriul sau stramos cu clasa two, si asa mai departe. Totusi, in general, ar trebui sa eviti incercarea de a selecta elemente care necesita acest nivel de imbricare, deoarece poate deveni destul de confuz si lung, si poate cauza probleme legate de specificitate.
+            </p>
+
+            <h2>
+                Proprietati pentru inceput
+            </h2>
+
+            <p>
+                Exista cateva proprietati CSS pe care le vei folosi tot timpul sau, cel putin, destul de des. Vom introduce mai multe dintre aceste proprietati, desi aceasta nu este o lista completa. Invatarea urmatoarelor proprietati va fi suficienta pentru a incepe.
+            </p>
+
+            <h3>
+                Color si background-color
+            </h3>
+
+            <p>
+                Proprietatea color seteaza culoarea textului unui element, in timp ce background-color seteaza, ei bine, culoarea de fundal a unui element. Cred ca am terminat aici?
+            </p>
+
+            <p>
+                Aproape. Ambele proprietati pot accepta mai multe tipuri de valori. Una dintre cele mai comune este un cuvant cheie, precum un nume real de culoare, cum ar fi red, sau cuvantul cheie transparent. Acestea accepta si valori HEX, RGB si HSL, pe care poate le-ai intalnit daca ai folosit vreodata un program de editare foto sau un site unde iti poti personaliza culorile profilului.
+            </p>
+
+            <pre>
+                <code class="coding">
+                    p {
+                        /* hex exemplu: */
+                        color: #1100ff;
+                    }
+
+                    p {
+                        /* rgb exemplu: */
+                        color: rgb(100, 0, 127);
+                    }
+
+                    p {
+                        /* hsl exemplu: */
+                        color: hsl(15, 82%, 56%);
+                    }
+
+                </code>
+            </pre>
+
+            <h3>
+                Bazele tipografiei si text-align
+            </h3>
+
+            <p>
+                font-family poate fi o valoare unica sau o lista separata prin virgula, care determina ce font foloseste un element. Fiecare font va apartine uneia dintre doua categorii: fie un „nume de familie de fonturi”, precum "Times New Roman" (folosim ghilimele din cauza spatiului dintre cuvinte), fie un „nume de familie generic”, precum serif (numele de familie generic nu utilizeaza ghilimele).
+            </p>
+
+            <p>
+                Daca un browser nu poate gasi sau nu accepta primul font din lista, va folosi urmatorul, apoi urmatorul si asa mai departe, pana cand gaseste un font acceptat si valid. De aceea, este o buna practica sa incluzi o lista de valori pentru aceasta proprietate, incepand cu fontul pe care doresti sa fie utilizat cel mai mult si terminand cu un font generic ca rezerva, de exemplu: font-family: "Times New Roman", serif;.
+            </p>
+
+            <p>
+                font-size va seta dimensiunea fontului, asa cum sugereaza numele proprietatii. Atunci cand atribui o valoare acestei proprietati, valoarea nu trebuie sa contina spatii, de exemplu: font-size: 22px nu are spatiu intre „22” si „px”.
+            </p>
+
+            <p>
+                font-weight afecteaza grosimea textului, presupunand ca fontul accepta greutatea specificata. Aceasta valoare poate fi un cuvant cheie, de exemplu: font-weight: bold, sau un numar intre 1 si 1000, de exemplu: font-weight: 700 (echivalent cu bold). De obicei, valorile numerice vor fi in trepte de 100 pana la 900, desi acest lucru va depinde de font.
+            </p>
+
+            <p>
+                text-align va alinia textul orizontal in cadrul unui element, iar poti folosi cuvintele cheie comune pe care le-ai intalnit in editoare de text ca valori pentru aceasta proprietate, de exemplu: text-align: center.
+            </p>
+
+            <h3>Inaltime si latime imagine</h3>
+
+            <p>
+                Imaginile nu sunt singurele elemente pentru care putem ajusta inaltimea si latimea, dar vrem sa ne concentram in mod specific asupra lor in acest caz.
+            </p>
+
+            <p>
+                Implicit, valorile height si width ale unui element <code>&lt;img&gt;</code> vor fi aceleasi ca dimensiunile reale ale fisierului imagine. Daca vrei sa ajustezi dimensiunea imaginii fara a-i pierde proportiile, trebuie sa folosesti valoarea auto pentru proprietatea height si sa ajustezi valoarea width:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    img {
+                        height: auto;
+                        width: 500px;
+                    }
+                </code>
+            </pre>
+
+            <p>
+                De exemplu, daca dimensiunea originala a unei imagini era 500px inaltime si 1000px latime, utilizarea CSS de mai sus ar rezulta intr-o inaltime de 250px.
+            </p>
+
+            <p>
+                Aceste proprietati functioneaza in conjunctie cu atributele height si width din HTML. Este recomandat sa incluzi atat aceste proprietati, cat si atributele HTML pentru elementele de imagine, chiar daca nu intentionezi sa ajustezi valorile fata de cele originale ale fisierului imagine. Daca aceste valori nu sunt incluse si o imagine se incarca mai lent decat restul continutului paginii, initial nu va ocupa spatiu pe pagina, dar va provoca brusc o schimbare drastica a continutului odata ce se incarca. Declararea explicita a unei inaltimi si latimi previne acest lucru, deoarece spatiul va fi „rezervat” pe pagina si va aparea gol pana cand imaginea se incarca.
+            </p>
+
+            <h2>Adaugarea CSS la HTML</h2>
+
+            <p>
+                Acum ca am invatat cateva elemente de sintaxa de baza, probabil te intrebi cum sa adaugam tot acest CSS in HTML-ul nostru. Exista trei metode prin care putem face acest lucru.
+            </p>
+
+            <h3>
+                CSS extern
+            </h3>
+
+            <p>
+                CSS extern este cea mai comuna metoda pe care o vei intalni si presupune crearea unui fisier separat pentru CSS si legarea acestuia in interiorul tag-urilor <code>&lt;head&gt;</code> de deschidere si inchidere ale HTML-ului, folosind un element <code>&lt;link&gt;</code> fara continut:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;!-- index.html --&gt;
+
+                    &lt;head&gt;
+                    &lt;link rel="stylesheet" href="styles.css"&gt;
+                    &lt;/head&gt;
+
+                </code>
+            </pre>
+
+            <pre>
+                <code class="coding">
+                    /* styles.css */
+
+                    div {
+                        color: white;
+                        background-color: black;
+                    }
+
+                    p {
+                        color: red;
+                    }
+
+                </code>
+            </pre>
+
+            <p>
+                Mai intai, adaugam un element <code>&lt;link&gt;</code> fara continut in interiorul tag-urilor de deschidere si inchidere <code>&lt;head&gt;</code> ale fisierului HTML. Atributul href reprezinta locatia fisierului CSS, fie un URL absolut, fie—ceea ce vei folosi—un URL relativ fata de locatia fisierului HTML. In exemplul nostru de mai sus, presupunem ca ambele fisiere sunt situate in acelasi director. Atributul rel este obligatoriu si specifica relatia dintre fisierul HTML si fisierul legat.
+            </p>
+
+            <p>
+                Apoi, in fisierul nou creat styles.css, avem selectorul (div si p), urmat de o pereche de acolade de deschidere si inchidere, care formeaza un „bloc de declaratii”. In final, plasam orice declaratii in interiorul blocului de declaratii. color: white; este o declaratie, unde color este proprietatea si white este valoarea, iar background-color: black; este o alta declaratie.
+            </p>
+
+            <p>
+                O nota despre numele fisierelor: styles.css este doar denumirea pe care am ales-o aici. Poti numi fisierul cum doresti, atat timp cat extensia este .css, desi „style” sau „styles” sunt cele mai frecvent utilizate.
+            </p>
+
+            <p>
+                Cateva avantaje ale acestei metode sunt:
+
+                <ol>
+                    <li>Pastreaza HTML-ul si CSS-ul separat, ceea ce face ca fisierul HTML sa fie mai mic si sa arate mai curat.</li>
+                    <li>Trebuie sa editam CSS-ul intr-un singur loc, ceea ce este util in special pentru site-urile cu multe pagini care impartasesc stiluri similare.</li>
+                </ol>
+            </p>
+
+            <h3>
+                CSS intern
+            </h3>
+
+            <p>
+                CSS intern (sau CSS incorporat) presupune adaugarea CSS-ului in interiorul fisierului HTML, in loc sa creezi un fisier complet separat. Cu metoda interna, toate regulile sunt plasate intre o pereche de tag-uri <code>&lt;style&gt;</code> de deschidere si inchidere, care sunt apoi plasate in interiorul tag-urilor <code>&lt;head&gt;</code> din fisierul HTML. Deoarece stilurile sunt introduse direct in tag-urile <code>&lt;head&gt;</code>, nu mai avem nevoie de un element <code>&lt;link&gt;</code> precum in metoda externa.
+            </p>
+
+            <p>
+                In afara acestor diferente, sintaxa este exact aceeasi ca in metoda externa (selector, acolade, declaratii):
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;head&gt;
+                    &lt;style&gt;
+                        div {
+                            color: white;
+                            background-color: black;
+                        }
+
+                        p {
+                            color: red;
+                        }
+                    &lt;/style&gt;
+                    &lt;/head&gt;
+                    &lt;body&gt;
+                    ...
+                    &lt;/body&gt;
+
+                </code>
+            </pre>
+
+            <p>
+                Aceasta metoda poate fi utila pentru adaugarea unor stiluri unice unei singure pagini dintr-un site web, dar nu pastreaza separarea dintre HTML si CSS, asa cum face metoda externa, iar in functie de numarul de reguli si declaratii, fisierul HTML poate deveni destul de mare.
+            </p>
+
+            <h3>
+                CSS inline
+            </h3>
+
+            <p>
+                CSS inline permite adaugarea stilurilor direct in elementele HTML, desi aceasta metoda nu este atat de recomandata:
+            </p>
+
+            <pre>
+                <code class="coding">
+                    &lt;body&gt;
+                        &lt;div style="color: white; background-color: black;"&gt;...&lt;/div&gt;
+                    &lt;/body&gt;
+                </code>
+            </pre>
+
+            <p>
+                Primul lucru de remarcat este ca nu folosim niciun selector aici, deoarece stilurile sunt adaugate direct in tag-ul de deschidere <code>&lt;div&gt;</code>. Apoi, avem atributul style=, cu valoarea sa in interiorul ghilimelelor, care contine declaratiile.
+            </p>
+
+            <p>
+                Daca ai nevoie sa adaugi un stil unic unui singur element, aceasta metoda poate functiona bine. Totusi, in general, nu este recomandata pentru adaugarea CSS la HTML din cateva motive:
+                <ul>
+                    <li>Poate deveni rapid dezordonata daca adaugi multe declaratii unui singur element, facand fisierul HTML inutil de mare</li>
+                    <li>Daca vrei ca mai multe elemente sa aiba acelasi stil, ar trebui sa copiezi si sa lipesti acelasi stil in fiecare element individual, provocand repetitii inutile si mai multa incarcare.</li>
+                    <li>Orice CSS inline va suprascrie celelalte doua metode, ceea ce poate duce la rezultate neasteptate. (Desi nu vom explora acest aspect aici, acest lucru poate fi folosit strategic.)</li>
+                </ul>
+            </p>
+        </div>
+
+        
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="css-cascade.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

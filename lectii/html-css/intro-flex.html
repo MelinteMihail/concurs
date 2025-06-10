@@ -3,9 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Introducere in Flexbox</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                    Asa cum vei invata, exista multe modalitati de a muta elementele pe o pagina web. De-a lungul anilor, au fost dezvoltate metode noi, iar cele mai vechi au devenit invechite. Flexbox nu a fost intotdeauna disponibil in CSS—debutul sau a fost revolutionar. Afla mai multe despre <a href="https://medium.com/@BennyOgidan/history-of-css-grid-and-css-flexbox-658ae6cfe6d2" target="_blank">istoria Flexbox</a>.
+            </p>
+
+            <p>
+                Multe resurse il plaseaza spre sfarsitul curriculumului, deoarece este relativ nou ca tehnologie. Insa, in acest moment, a devenit metoda standard de pozitionare a elementelor pentru multi dezvoltatori. Flexbox va fi unul dintre cele mai utilizate instrumente din trusa ta de unelte, asa ca de ce sa nu-l inveti mai intai?
+            </p>
+
+            <h2>
+                Inainte de a incepe
+            </h2>
+
+            <p>
+                Layout-urile Flexbox pot deveni putin complicate. In lectia anterioara, ai invatat cum sa inspectezi si sa depanezi lucrurile folosind instrumentele pentru dezvoltatori ale browserului tau. Aceste instrumente vor fi esentiale in lectiile urmatoare. Daca ceva nu se comporta asa cum te astepti, inspectarea in instrumentele pentru dezvoltatori ar trebui sa fie primul pas de fiecare data.
+            </p>
+
+            <p>
+                Flexbox nu este neaparat mai dificil decat celelalte concepte pe care le-am acoperit pana acum, dar are cateva aspecte suplimentare. Va fi oarecum dificil sa folosesti orice lucru pe care il inveti in aceste prime lectii pana cand ajungi la final si le poti combina toate. Pe masura ce progresam, fa-ti un favor si experimenteaza cu toate exemplele de cod.
+            </p>
+
+            <p>
+                Aproape sigur va trebui sa revii si sa consulti aceste lectii (sau cateva dintre resursele pe care ti le oferim) atunci cand ajungi la temele de la sfarsitul sectiunii. Totusi, daca iti iei timp si experimentezi cu toate exemplele de cod pe care le oferim, vei sti mai bine unde sa cauti cand va fi nevoie.
+            </p>
+
+            <h2>
+                Let's flex!
+            </h2>
+
+            <p>
+                Flexbox este o metoda de organizare a elementelor in randuri sau coloane. Aceste elemente vor „flexa” (adica vor creste sau se vor micsora) in functie de anumite reguli pe care le poti defini. Pentru a incepe, sa aruncam o privire la o demonstratie.
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="first flex example" src="https://codepen.io/melmivxd/embed/ogXpdjM?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/ogXpdjM">
+                first flex example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <p>
+                Vom analiza exact ce se intampla aici in curand. Dar, pentru moment, sa decomentam cele doua declaratii CSS legate de flex din Codepen-ul de mai sus, eliminand /* si */ care le inconjoara, apoi sa verificam rezultatul.
+            </p>
+
+            <p>
+                Toate cele 3 div-uri ar trebui acum sa fie aranjate orizontal. Daca redimensionezi cadrul rezultatelor folosind butoanele „1x”, „.5x” si „.25x”, vei observa ca div-urile vor „flexa”. Ele vor umple spatiul disponibil si vor avea latime egala.
+            </p>
+
+            <p>
+                Daca adaugi un alt div in HTML, in interiorul .flex-container, acesta va aparea langa celelalte, iar toate elementele se vor adapta pentru a se potrivi in spatiul disponibil.
+            </p>
+
+            <h3>
+                Containere si elemente flex
+            </h3>
+
+            <p>
+                Asa cum ai observat, Flexbox nu este doar o singura proprietate CSS, ci un intreg set de instrumente pe care le poti folosi pentru a pozitiona elementele acolo unde ai nevoie. Unele dintre aceste proprietati apartin containerului flex, in timp ce altele sunt aplicate elementelor flex. Acesta este un concept important.
+            </p>
+
+            <p>
+                Un container flex este orice element care are display: flex aplicat. Un element flex este orice element care se afla direct in interiorul unui container flex.
+            </p>
+
+            <img src="../../images/flex-1.png" alt="flex description">
+
+            <p>
+                Putin derutant, orice element poate fi atat un container flex, cat si un element flex. Cu alte cuvinte, poti aplica display: flex pe un element flex si apoi sa folosesti Flexbox pentru a aranja elementele sale copil.
+            </p>
+
+            <img src="../../images/flex-2.png" alt="flex description 2">
+            
+            <p>
+                Crearea si imbricarea mai multor containere si elemente flex este metoda principala prin care vom construi layout-uri complexe. Imaginea urmatoare a fost realizata folosind exclusiv Flexbox pentru a aranja, dimensiona si pozitiona diversele elemente. Flexbox este un instrument extrem de puternic.
+            </p>
+
+            <img src="../../images/flex-3.png" alt="flex description 3">
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="redimensionare.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>        
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

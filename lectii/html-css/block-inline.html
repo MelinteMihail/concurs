@@ -3,9 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="html css logo">
+            </div>
+
+            <div class="text">
+                <h1>Block si Inline</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <h2>
+                Introducere
+            </h2>
+
+            <p>
+                In lectia anterioara, am descoperit ca diferitele tipuri de afisare au modele de casete distincte si putem modifica calculul casetei prin schimbarea proprietatii box-sizing. CSS are doua tipuri de casete: block si inline, care determina comportamentul si interactiunea elementelor. Proprietatea display controleaza modul in care elementele HTML apar pe pagina web. Vom explora mai detaliat optiunile sale in aceasta lectie.
+            </p>
+
+            <h2>
+                Block vs inline
+            </h2>
+
+            <p>
+                Majoritatea elementelor pe care le-ai invatat pana acum sunt elemente de tip block. Cu alte cuvinte, stilul lor implicit este display: block. In mod implicit, elementele block vor aparea pe pagina stivuite unele peste altele, fiecare element nou incepand pe o linie noua.
+            </p>
+
+            <p>
+                Elementele inline, pe de alta parte, nu incep pe o noua linie. Ele apar in rand cu elementele langa care sunt plasate. Un exemplu clar de element inline este un link, adica tag-ul <code>&lt;a&gt;</code>. Daca inserezi un astfel de tag in mijlocul unui paragraf de text, link-ul se va comporta ca parte din acel paragraf. In plus, padding si margin se comporta diferit pe elementele inline. In general, nu este recomandat sa adaugi padding sau margin suplimentar elementelor inline.
+            </p>
+
+            <h3>
+                Compromisul: inline-block
+            </h3>
+
+            <p>
+                Elementele inline-block se comporta ca elementele inline, dar permit utilizarea padding si margin in stil block. display: inline-block este un instrument util de cunoscut, dar in practica, probabil vei folosi mai des flexbox daca vrei sa aliniezi mai multe casete. Flexbox va fi explicat in detaliu in lectia urmatoare.
+            </p>
+
+            <h2>
+                Div-uri si span-uri
+            </h2>
+
+            <p>
+                Nu putem vorbi despre elementele block si inline fara sa discutam despre div-uri si span-uri. Toate celelalte elemente HTML pe care le-am intalnit pana acum ofera un sens continutului lor. De exemplu, elementele <code>&lt;p&gt;</code> ii spun browserului sa afiseze textul pe care il contin ca un paragraf. Elementele <code>&lt;strong&gt;</code> indica browserului ce texte sunt importante si asa mai departe. Totusi, div-urile si span-urile nu atribuie niciun sens specific continutului lor. Sunt doar casete generice care pot contine orice.
+            </p>
+
+            <p>
+                Disponibilitatea unor astfel de elemente este mult mai utila decat pare la prima vedere. Deseori vom avea nevoie de elemente care sa nu aiba alt scop decat sa fie „hook”-uri, astfel incat sa le putem atribui un id sau o clasa pentru a le stiliza cu CSS. Un alt caz de utilizare frecvent este gruparea unor elemente conexe sub un element parinte, pentru a le pozitiona corect pe pagina. Div-urile si span-urile ne permit sa facem acest lucru.
+            </p>
+
+            <p>
+                <code>&lt;div&gt;</code> este un element de tip block in mod implicit. Este folosit frecvent ca element container pentru gruparea altor elemente. Div-urile ne permit sa impartim pagina in diverse blocuri si sa aplicam stilizari acestor blocuri.
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="block-inline-lesson-div-example" src="https://codepen.io/melmivxd/embed/emNyMxd?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/emNyMxd">
+                block-inline-lesson-div-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+
+            <p>
+                Span este un element de tip inline in mod implicit. Poate fi folosit pentru a grupa continutul textului si elementele HTML inline pentru stilizare si ar trebui utilizat doar atunci cand niciun alt element HTML semantic nu este potrivit.
+            </p>
+
+            <iframe height="300" style="width: 100%;" scrolling="no" title="block-inline-lesson-span-example" src="https://codepen.io/melmivxd/embed/bNdavyX?default-tab=html%2Cresult" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+                See the Pen <a href="https://codepen.io/melmivxd/pen/bNdavyX">
+                block-inline-lesson-span-example</a> by melmivxd (<a href="https://codepen.io/melmivxd">@melmivxd</a>)
+                on <a href="https://codepen.io">CodePen</a>.
+            </iframe>
+        </div>
+
+        <div class="buttons">
+            <a href="html-css-course.html">
+                <button class="btn">
+                    <img src="../../images/person-chalkboard-solid.svg" alt="person teaching">
+                    <p>Intoarce-te la Curs</p>
+                </button>
+            </a>
+
+            <a href="css-quiz.html">
+                <button class="btn">
+                    <img src="../../images/arrow-right-solid.svg" alt="arrow pointing right">
+                    <p>Urmatoarea lectie</p>
+                </button>
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
