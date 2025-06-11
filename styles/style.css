@@ -559,41 +559,15 @@ footer .top .logo img {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-        /* header nav {
-        margin-inline: 5px;
-    }
-    
-    header nav .left img {
-        width: 200px;
-    }
-
-    
-    header .container h1 {
-        font-size: 32px;
-        }
-        
-        header .container h2 {
-            font-size: 24px;
-            }
-            
-            header .images {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                }
-                
-                header .images img {
-                    height: 250px;
-                    }
-                    
-                    
-                    header .images .design-image.two {
-                        margin-inline: auto;
-                        } */
     header .images .design-image.one {
+        margin-left: 50px;
         margin-bottom: 50px;
     }
+
+    header .images .design-image.two {
+        margin-right: 50px;
+    }
+
     header .container {
         text-align: center;
         margin-left: 10px;
@@ -606,7 +580,6 @@ footer .top .logo img {
     
     main .explanation .content {
         overflow-x: hidden;
-        /* flex-direction: column; */
         align-items: center;
         justify-content: center;
     }
