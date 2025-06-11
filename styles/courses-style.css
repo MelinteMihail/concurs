@@ -186,6 +186,10 @@ footer .top .logo img {
         margin-inline: 5px;
     }
 
+    header nav .left img {
+        width: 200px;
+    }
+
     header .container .summary {
         width: 100%;
         text-align: center;

@@ -35,11 +35,6 @@ li {
     margin-left: 4rem;
 }
 
-p, h2, h3, iframe,
-main .text .text-image  {
-    margin-top: 1rem;
-}
-
 code {
     background-color: var(--lighter-dark-purple);
     padding: 0.125rem;
@@ -47,29 +42,42 @@ code {
     overflow: auto;
 }
 
-input {
-    display: block;
+.input {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 0.5rem;
 }
 
-input[type="radio"] {
+.input {
+    display: flex;
+    align-items: flex-start;
+    min-height: 40px;
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.input input[type="radio"] {
     appearance: none;
     width: 20px;
     height: 20px;
     border-radius: 50%;
     border: 1px solid gray;
     background-color: #fff;
+    
+    flex-shrink: 0;
+    margin-right: 10px;
+    margin-top: 2px;
 }
-
-input[type="radio"]:checked {
+    
+.input input[type="radio"]:checked {
     background-color: var(--neon-orange);
 }
 
-
-.input {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-top: 0.5rem;
+.input label {
+    flex: 1;
+    line-height: 1.3;
+    word-wrap: break-word;
 }
 
 pre {
@@ -120,6 +128,11 @@ header .title .logo img {
 main {
     width: 50%;
     margin: auto;
+}
+
+main p, main h2, main h3, 
+main iframe, main .text .text-image  {
+    margin-top: 1rem;
 }
 
 main .buttons {
@@ -226,5 +239,196 @@ footer .top .logo img {
 
     100% {
         transform: translateY(0);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    header nav {
+        margin-inline: 5px;
+    }
+
+    header nav .left img {
+        width: 200px;
+    }
+
+    main {
+        width: 75%;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    main .buttons {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text,
+    footer .top .logo {
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs,
+    footer .top .liceu   {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    header nav {
+        margin-inline: 5px;
+    }
+
+    header nav .left img {
+        width: 200px;
+    }
+
+    main {
+        width: 75%;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    main .buttons {
+        align-items: center;
+        gap: 2rem;
+    }
+
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text,
+    footer .top .logo {
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs,
+    footer .top .liceu   {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    header nav {
+        margin-inline: 5px;
+    }
+
+    header nav .left img {
+        width: 200px;
+    }
+
+    main {
+        width: 60%;
+    }
+
+    main img {
+        width: 100%;
+    }
+
+    main .buttons {
+        align-items: center;
+        gap: 2rem;
+    }
+    
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text,
+    footer .top .logo {
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs,
+    footer .top .liceu   {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
     }
 }
