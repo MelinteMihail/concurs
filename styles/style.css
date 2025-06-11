@@ -331,3 +331,317 @@ footer .top .logo img {
         opacity: 1;
     }
 }
+
+@media only screen and (max-width: 767px) {
+    header nav {
+        margin-inline: 5px;
+    }
+    
+    header nav .left img {
+        width: 200px;
+    }
+
+    header .container {
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    header .container h1 {
+        font-size: 32px;
+    }
+
+    header .container h2 {
+        font-size: 24px;
+    }
+
+    header .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .images img {
+        height: 225px;
+    }
+    
+    header .images .design-image.one {
+        margin-inline: auto;
+        margin-bottom: 50px;
+    }
+
+    header .images .design-image.two {
+        margin-inline: auto;
+    }
+
+    header .arrow {
+        display: none;
+    }
+
+
+    main .explanation .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .explanation .content .learn,
+    main .explanation .content .exercise  {
+        width: 400px;
+    }
+
+    main .courses .courses-content {
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text,
+    footer .top .logo {
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs,
+    footer .top .liceu   {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    header nav {
+        margin-inline: 5px;
+    }
+    
+    header nav .left img {
+        width: 200px;
+    }
+
+    header .container {
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    header .container h1 {
+        font-size: 32px;
+    }
+
+    header .container h2 {
+        font-size: 24px;
+    }
+
+    header .images {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .images img {
+        height: 250px;
+    }
+    
+    header .images .design-image.one {
+        margin-inline: auto;
+        margin-bottom: 50px;
+    }
+
+    header .images .design-image.two {
+        margin-inline: auto;
+    }
+
+    header .arrow {
+        display: none;
+    }
+
+
+    main .explanation .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .explanation .content .learn,
+    main .explanation .content .exercise  {
+        width: 400px;
+    }
+
+    main .courses .courses-content {
+        flex-direction: column;
+    }
+
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text{
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+        /* header nav {
+        margin-inline: 5px;
+    }
+    
+    header nav .left img {
+        width: 200px;
+    }
+
+    
+    header .container h1 {
+        font-size: 32px;
+        }
+        
+        header .container h2 {
+            font-size: 24px;
+            }
+            
+            header .images {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                }
+                
+                header .images img {
+                    height: 250px;
+                    }
+                    
+                    
+                    header .images .design-image.two {
+                        margin-inline: auto;
+                        } */
+    header .images .design-image.one {
+        margin-bottom: 50px;
+    }
+    header .container {
+        text-align: center;
+        margin-left: 10px;
+    }
+    
+    header .arrow {
+        display: none;
+    }
+    
+    
+    main .explanation .content {
+        overflow-x: hidden;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+    }
+
+    main .explanation .content .learn,
+    main .explanation .content .exercise  {
+        width: 400px;
+    }
+
+    main .courses .courses-content {
+        overflow-x: hidden;
+    }
+
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text{
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
+
+/*
+Large devices (laptops/desktops, 992px and up)
+@media only screen and (min-width: 992px) {...}
+
+Extra large devices (large laptops and desktops, 1200px and up)
+@media only screen and (min-width: 1200px) {...}
+
+*/
