@@ -86,6 +86,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const score = calculateScore('html');
                 const total = Object.keys(correctAnswers.html).length;
                 displayResult(htmlBtn, score, total);
+            } else {
+                alert("Completeaza fiecare intrebare inainte.");
             }
         });
     }
@@ -96,6 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const score = calculateScore('css');
                 const total = Object.keys(correctAnswers.css).length;
                 displayResult(cssBtn, score, total);
+            } else {
+                alert("Completeaza fiecare intrebare inainte.");
             }
         });
     }
@@ -106,6 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const score = calculateScore('flex');
                 const total = Object.keys(correctAnswers.flex).length;
                 displayResult(flexBtn, score, total);
+            } else {
+                alert("Completeaza fiecare intrebare inainte.");
             }
         });
     }
@@ -116,6 +122,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 const score = calculateScore('js');
                 const total = Object.keys(correctAnswers.js).length;
                 displayResult(jsBtn, score, total);
+            } else {
+                alert("Completeaza fiecare intrebare inainte.");
             }
         });
     }
