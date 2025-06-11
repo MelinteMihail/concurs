@@ -180,3 +180,159 @@ footer .top .logo img {
         transform: translateY(0);
     }
 }
+
+@media only screen and (max-width: 767px) {
+    header nav {
+        margin-inline: 5px;
+    }
+
+    header .container .summary {
+        width: 100%;
+        text-align: center;
+    }
+
+    main .html,
+    main .css,
+    main .flexbox {
+        width: 100%;
+
+        margin-inline: 10px;
+    } 
+
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text,
+    footer .top .logo {
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs,
+    footer .top .liceu   {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    header .container .summary {
+        width: 100%;
+        text-align: center;
+    }
+
+    main .html,
+    main .css,
+    main .flexbox {
+        width: 100%;
+
+        margin-inline: 10px;
+    }
+
+        footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text,
+    footer .top .logo {
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs,
+    footer .top .liceu   {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1440px) {
+    footer {
+        margin-top: 10rem;
+    
+        padding-block: 2rem;
+        padding-inline: 0;
+        background-color: var(--lighter-dark-purple);
+
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        
+    }
+
+    footer .top,
+    footer .bot {
+        display: flex;
+        align-items: center;
+        justify-content: default;
+
+        gap: 2rem;
+
+        margin-inline: 10px;
+    }
+
+    footer .bot .text,
+    footer .top .logo {
+        width: 50%;
+        text-align: start;
+    }
+
+    footer .bot .concurs,
+    footer .top .liceu   {
+        width: 50%;
+        text-align: end;
+    }
+
+    footer .top .logo img {
+        width: 200px;
+    }
+}
