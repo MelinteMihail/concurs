@@ -3,9 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
+    <script src="../../script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="js logo">
+            </div>
+
+            <div class="text">
+                <h1>Quiz: Flexbox</h1>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+        <div class="text">
+            <form action="" class="flex-quiz">
+                <div class="q1">
+                    <h2>1. Ce este Flexbox in CSS?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q1-a" name="q1" class="flex" value="a" required>
+                        <label for="q1-a">Un frame work pentru crearea de site-uri responsive.</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q1-b" name="q1" class="flex" value="b" required>
+                        <label for="q1-b">Un model de layout pentru aranjarea elementelor intr-un container.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q1-c" name="q1" class="flex" value="c" required>
+                        <label for="q1-c">Un set de reguli pentru gestionarea culorilor.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q1-d" name="q1" class="flex" value="d" required>
+                        <label for="q1-d">Un sistem pentru crearea animatiilor.</label>
+                    </div>
+                </div>
+
+                <div class="q2">
+                    <h2>2. Care este proprietatea CSS utilizata pentru a activa Flexbox pe un container?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q2-a" name="q2" class="flex" value="a" required>
+                        <label for="q2-a">display: flex;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q2-b" name="q2" class="flex" value="b" required>
+                        <label for="q2-b">flex: container;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q2-c" name="q2" class="flex" value="c" required>
+                        <label for="q2-c">layout: flex;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q2-d" name="q2" class="flex" value="d" required>
+                        <label for="q2-d">align: flex;</label>
+                    </div>
+                </div>
+
+                <div class="q3">
+                    <h2>3. Ce proprietate controleaza directia axei principale in Flexbox?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q3-a" name="q3" class="flex" value="a" required>
+                        <label for="q3-a">justify-content</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q3-b" name="q3" class="flex" value="b" required>
+                        <label for="q3-b">align-items</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q3-c" name="q3" class="flex" value="c" required>
+                        <label for="q3-c">flex-wrap</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q3-d" name="q3" class="flex" value="d" required>
+                        <label for="q3-d">flex-direction</label>
+                    </div>
+                </div>
+
+                <div class="q4">
+                    <h2>4. Cum se controleaza spatiul dintre elementele flexibile de-a lungul axei principale?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q4-a" name="q4" class="flex" value="a" required>
+                        <label for="q4-a">justify-content</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q4-b" name="q4" class="flex" value="b" required>
+                        <label for="q4-b">align-items</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q4-c" name="q4" class="flex" value="c" required>
+                        <label for="q4-c">flex-wrap</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q4-d" name="q4" class="flex" value="d" required>
+                        <label for="q4-d">align-content</label>
+                    </div>
+                </div>
+
+                <div class="q5">
+                    <h2>5. Ce proprietate este utilizata pentru a controla alinierea elementelor de-a lungul axei transversale?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q5-a" name="q5" class="flex" value="a" required>
+                        <label for="q5-a">align-items</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q5-b" name="q5" class="flex" value="b" required>
+                        <label for="q5-b">flex-grow</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q5-c" name="q5" class="flex" value="c" required>
+                        <label for="q5-c">justify-content</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q5-d" name="q5" class="flex" value="d" required>
+                        <label for="q5-d">flex-direction</label>
+                    </div>
+                </div>
+
+                <div class="q6">
+                    <h2>6. Ce face proprietatea 'flex-grow'?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q6-a" name="q6" class="flex" value="a" required>
+                        <label for="q6-a">Controleaza cat de mult poate scadea un element in raport cu celelalte.</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q6-b" name="q6" class="flex" value="b" required>
+                        <label for="q6-b">Controleaza spatiul dintre elemente.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q6-c" name="q6" class="flex" value="c" required>
+                        <label for="q6-c">Controleaza directia axei principale.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q6-d" name="q6" class="flex" value="d" required>
+                        <label for="q6-d">Controleaza cat de mult poate creste un element in raport cu celelalte.</label>
+                    </div>
+                </div>
+
+                <div class="q7">
+                    <h2>7. Cum se permite unui container Flexbox sa aiba mai multe randuri de elemente?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q7-a" name="q7" class="flex" value="a" required>
+                        <label for="q7-a">flex-direction: column;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q7-b" name="q7" class="flex" value="b" required>
+                        <label for="q7-b">flex-wrap: wrap;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q7-c" name="q7" class="flex" value="c" required>
+                        <label for="q7-c">align-items: stretch;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q7-d" name="q7" class="flex" value="d" required>
+                        <label for="q7-d">justify-content: space-around;</label>
+                    </div>
+                </div>
+
+                <div class="q8">
+                    <h2>8. Ce proprietate controleaza ordinea in care sunt afisate elementele flexibile?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q8-a" name="q8" class="flex" value="a" required>
+                        <label for="q8-a">flex-grow</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q8-b" name="q8" class="flex" value="b" required>
+                        <label for="q8-b">order</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q8-c" name="q8" class="flex" value="c" required>
+                        <label for="q8-c">justify-content</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q8-d" name="q8" class="flex" value="d" required>
+                        <label for="q8-d">align-self</label>
+                    </div>
+                </div>
+
+                <div class="q9">
+                    <h2>9. Cum se aliniaza un singur element flexibil diferit de celelalte?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q9-a" name="q9" class="flex" value="a" required>
+                        <label for="q9-a">justify-content</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q9-b" name="q9" class="flex" value="b" required>
+                        <label for="q9-b">align-self</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q9-c" name="q9" class="flex" value="c" required>
+                        <label for="q9-c">align-items</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q9-d" name="q9" class="flex" value="d" required>
+                        <label for="q9-d">flex-direction</label>
+                    </div>
+                </div>
+
+                <div class="q10">
+                    <h2>10. Care este valoarea implicita a proprietatii 'flex-direction'?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q10-a" name="q10" class="flex" value="a" required>
+                        <label for="q10-a">row</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q10-b" name="q10" class="flex" value="b" required>
+                        <label for="q10-b">column</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q10-c" name="q10" class="flex" value="c" required>
+                        <label for="q10-c">row-reverse</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q10-d" name="q10" class="flex" value="d" required>
+                        <label for="q10-d">column-reverse</label>
+                    </div>
+
+                    <div class="buttons quiz">
+                        <button type="button" class="flex-btn btn">
+                            <p>
+                                Trimite
+                            </p>
+                        </button>
+                    </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

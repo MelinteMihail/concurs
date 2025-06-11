@@ -3,9 +3,318 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
+    <script src="../../script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/js-neon.svg" alt="js logo">
+            </div>
+
+            <div class="text">
+                <h1>Quiz: JavaScript</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <form action="" class="js-quiz">
+                <div class="q1">
+                    <h2>1. Cum declaram o variabila constanta in JavaScript</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q1-a" name="q1" class="js" value="a" required>
+                        <label for="q1-a">let variabila;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q1-b" name="q1" class="js" value="b" required>
+                        <label for="q1-b">const variabila;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q1-c" name="q1" class="js" value="c" required>
+                        <label for="q1-c">var variabila;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q1-d" name="q1" class="js" value="d" required>
+                        <label for="q1-d">constant variabila;</label>
+                    </div>
+                </div>
+
+                <div class="q2">
+                    <h2>2. Ce va afisa urmatorul cod: console.log("Hello, World!");</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q2-a" name="q2" class="js" value="a" required>
+                        <label for="q2-a">Hello, World!</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q2-b" name="q2" class="js" value="b" required>
+                        <label for="q2-b">undefined</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q2-c" name="q2" class="js" value="c" required>
+                        <label for="q2-c">NaN</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q2-d" name="q2" class="js" value="d" required>
+                        <label for="q2-d">Error</label>
+                    </div>
+                </div>
+
+                <div class="q3">
+                    <h2>3. Ce va afisa urmatorul cod: console.log(10 > 5);</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q3-a" name="q3" class="js" value="a" required>
+                        <label for="q3-a">true</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q3-b" name="q3" class="js" value="b" required>
+                        <label for="q3-b">false</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q3-c" name="q3" class="js" value="c" required>
+                        <label for="q3-c">undefined</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q3-d" name="q3" class="js" value="d" required>
+                        <label for="q3-d">NaN</label>
+                    </div>
+                </div>
+
+                <div class="q4">
+                    <h2>4. Ce valoarea va avea variabila x dupa executarea codului: <br> let x = 10; if(x > 5) x = x + 5;</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q4-a" name="q4" class="js" value="a" required>
+                        <label for="q4-a">5</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q4-b" name="q4" class="js" value="b" required>
+                        <label for="q4-b">10</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q4-c" name="q4" class="js" value="c" required>
+                        <label for="q4-c">15</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q4-d" name="q4" class="js" value="d" required>
+                        <label for="q4-d">20</label>
+                    </div>
+                </div>
+
+                <div class="q5">
+                    <h2>5. Cum definim o functie in JavaScript?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q5-a" name="q5" class="js" value="a" required>
+                        <label for="q5-a">function myFunction() { }</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q5-b" name="q5" class="js" value="b" required>
+                        <label for="q5-b">def myFunction() { }</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q5-c" name="q5" class="js" value="c" required>
+                        <label for="q5-c">func myFunction() { }</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q5-d" name="q5" class="js" value="d" required>
+                        <label for="q5-d">function: myFunction() { }</label>
+                    </div>
+                </div>
+
+                <div class="q6">
+                    <h2>6. Ce va afisa urmatorul cod: <br> let arr = [10, 20, 30]; console.log(arr.length); ?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q6-a" name="q6" class="js" value="a" required>
+                        <label for="q6-a">2</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q6-b" name="q6" class="js" value="b" required>
+                        <label for="q6-b">3</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q6-c" name="q6" class="js" value="c" required>
+                        <label for="q6-c">30</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q6-d" name="q6" class="js" value="d" required>
+                        <label for="q6-d">undefined</label>
+                    </div>
+                </div>
+
+                <div class="q7">
+                    <h2>7. Ce va returna urmatorul cod: <br> let a = [1, 2, 3]; a.map(x => x * 2); ?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q7-a" name="q7" class="js" value="a" required>
+                        <label for="q7-a">[1, 2, 3]</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q7-b" name="q7" class="js" value="b" required>
+                        <label for="q7-b">[2, 4, 6]</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q7-c" name="q7" class="js" value="c" required>
+                        <label for="q7-c">[1, 4, 9]</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q7-d" name="q7" class="js" value="d" required>
+                        <label for="q7-d">[0, 1, 2]</label>
+                    </div>
+                </div>
+
+                <div class="q8">
+                    <h2>8. Ce va returna urmatorul cod: <br> let a = [10, 20, 30, 40]; a.filter(x => x > 25); ?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q8-a" name="q8" class="js" value="a" required>
+                        <label for="q8-a">[10, 20, 30, 40]</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q8-b" name="q8" class="js" value="b" required>
+                        <label for="q8-b">[30, 40]</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q8-c" name="q8" class="js" value="c" required>
+                        <label for="q8-c">[25, 30, 40]</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q8-d" name="q8" class="js" value="d" required>
+                        <label for="q8-d">[10, 20]</label>
+                    </div>
+                </div>
+
+                <div class="q9">
+                    <h2>9. Ce va returna urmatorul cod: <br> let a = [1, 2, 3, 4]; a.reduce((acc, x) => acc + 5, 0); ?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q9-a" name="q9" class="js" value="a" required>
+                        <label for="q9-a">10</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q9-b" name="q9" class="js" value="b" required>
+                        <label for="q9-b">24</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q9-c" name="q9" class="js" value="c" required>
+                        <label for="q9-c">0</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q9-d" name="q9" class="js" value="d" required>
+                        <label for="q9-d">1</label>
+                    </div>
+                </div>
+
+                <div class="q10">
+                    <h2>10. Cum verificam daca o variabila y este mai mare sau egala cu 20?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q10-a" name="q10" class="js" value="a" required>
+                        <label for="q10-a">y > 20</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q10-b" name="q10" class="js" value="b" required>
+                        <label for="q10-b">y >= 20</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q10-c" name="q10" class="js" value="c" required>
+                        <label for="q10-c">y == 20</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q10-d" name="q10" class="js" value="d" required>
+                        <label for="q10-d">y < 20</label>
+                    </div>
+
+                    <div class="buttons quiz">
+                        <button type="button" class="js-btn btn">
+                            <p>
+                                Trimite
+                            </p>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

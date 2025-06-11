@@ -3,9 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/lesson-style.css">
+    <script src="../../script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+    <header>
+        <nav>
+            <a href="../../index.html">
+                <div class="left">
+                    <img src="../../images/logo.svg" alt="logo" width="250">
+                </div>
+            </a>
+
+            <div class="right">
+                <h3>
+                    <a href="about.html">Despre Noi</a>
+                </h3>
+            </div>
+        </nav>
+
+        <div class="title">
+            <div class="logo">
+                <img src="../../images/html-css-neon.svg" alt="js logo">
+            </div>
+
+            <div class="text">
+                <h1>Quiz: HTML</h1>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text">
+            <form action="" class="html-form">
+                <div class="q1">
+                    <h2>1. Care este elementul de baza pentru crearea unei pagini HTML?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q1-a" name="q1" value="a" class="html" required>
+                        <label for="q1-a">&lt;html&gt;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q1-b" name="q1" value="b" class="html" required>
+                        <label for="q1-b">&lt;body&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q1-c" name="q1" value="c" class="html" required>
+                        <label for="q1-c">&lt;head&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q1-d" name="q1" value="d" class="html" required>
+                        <label for="q1-d">&lt;title&gt;</label>
+                    </div>
+                </div>
+
+                <div class="q2">
+                    <h2>2. Cum se defineste un paragraf in HTML?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q2-a" name="q2" value="a" class="html" required>
+                        <label for="q2-a">&lt;p&gt;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q2-b" name="q2" value="b" class="html" required>
+                        <label for="q2-b">&lt;div&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q2-c" name="q2" value="c" class="html" required>
+                        <label for="q2-c">&lt;span&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q2-d" name="q2" value="d" class="html" required>
+                        <label for="q2-d">&lt;h1&gt;</label>
+                    </div>
+                </div>
+
+                <div class="q3">
+                    <h2>3. Care este scopul elementului &lt;title&gt; in HTML?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q3-a" name="q3" value="a" class="html" required>
+                        <label for="q3-a">Defineste titlul paginii afisat in bara de titlu a browserului.</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q3-b" name="q3" value="b" class="html" required>
+                        <label for="q3-b">Defineste titlul principal al paginii afisat pe ecran.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q3-c" name="q3" value="c" class="html" required>
+                        <label for="q3-c">Defineste un subtitlu pentru pagina.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q3-d" name="q3" value="d" class="html" required>
+                        <label for="q3-d">Defineste o descriere meta pentru pagina.</label>
+                    </div>
+                </div>
+
+                <div class="q4">
+                    <h2>4. Cum se creeaza o lista ordonata in HTML?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q4-a" name="q4" value="a" class="html" required>
+                        <label for="q4-a">&lt;ul&gt;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q4-b" name="q4" value="b" class="html" required>
+                        <label for="q4-b">&lt;ol&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q4-c" name="q4" value="c" class="html" required>
+                        <label for="q4-c">&lt;li&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q4-d" name="q4" value="d" class="html" required>
+                        <label for="q4-d">&lt;dl&gt;</label>
+                    </div>
+                </div>
+
+                <div class="q5">
+                    <h2>5. Cum se adauga un link in HTML?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q5-a" name="q5" value="a" class="html" required>
+                        <label for="q5-a">&lt;a href="URL"&gt;Text&lt;/a&gt;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q5-b" name="q5" value="b" class="html" required>
+                        <label for="q5-b">&lt;link href="URL"&gt;Text&lt;/link&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q5-c" name="q5" value="c" class="html" required>
+                        <label for="q5-c">&lt;url href="URL"&gt;Text&lt;/url&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q5-d" name="q5" value="d" class="html" required>
+                        <label for="q5-d">&lt;href="URL"&gt;Text&lt;/href&gt;</label>
+                    </div>
+                </div>
+
+                <div class="q6">
+                    <h2>6. Cum se insereaza o imagine in HTML?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q6-a" name="q6" value="a" class="html" required>
+                        <label for="q6-a">&lt;img src='URL' alt='Descriere'&gt;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q6-b" name="q6" value="b" class="html" required>
+                        <label for="q6-b">&lt;image src='URL' alt='Descriere'&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q6-c" name="q6" value="c" class="html" required>
+                        <label for="q6-c">&lt;pic src='URL' alt='Descriere'&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q6-d" name="q6" value="d" class="html" required>
+                        <label for="q6-d">&lt;photo src='URL' alt='Descriere'&gt;</label>
+                    </div>
+                </div>
+
+                <div class="q7">
+                    <h2>7. Care este diferenta dintre &lt;ul&gt; si &lt;ol&gt;?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q7-a" name="q7" value="a" class="html" required>
+                        <label for="q7-a">&lt;ul&gt; creeaza o lista ordonata, iar &lt;ol&gt; creeaza o lista neordonata.</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q7-b" name="q7" value="b" class="html" required>
+                        <label for="q7-b">&lt;ul&gt; creeaza o lista neordonata, iar &lt;ol&gt; creeaza o lista ordonata.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q7-c" name="q7" value="c" class="html" required>
+                        <label for="q7-c">&lt;ul&gt; este utilizat pentru liste de imagini, iar &lt;ol&gt; pentru liste de text.</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q7-d" name="q7" value="d" class="html" required>
+                        <label for="q7-d">&lt;ul&gt; este utilizat pentru liste de linkuri, iar &lt;ol&gt; pentru liste de paragrafe.</label>
+                    </div>
+                </div>
+
+                <div class="q8">
+                    <h2>8. Cum se defineste un element de lista in HTML?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q8-a" name="q8" value="a" class="html" required>
+                        <label for="q8-a">&lt;li&gt;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q8-b" name="q8" value="b" class="html" required>
+                        <label for="q8-b">&lt;list&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q8-c" name="q8" value="c" class="html" required>
+                        <label for="q8-c">&lt;item&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q8-d" name="q8" value="d" class="html" required>
+                        <label for="q8-d">&lt;ul&gt;</label>
+                    </div>
+                </div>
+
+                <div class="q9">
+                    <h2>9. Ce atribut este obligatoriu pentru elementul &lt;img&gt;?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q9-a" name="q9" value="a" class="html" required>
+                        <label for="q9-a">src</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q9-b" name="q9" value="b" class="html" required>
+                        <label for="q9-b">alt</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q9-c" name="q9" value="c" class="html" required>
+                        <label for="q9-c">title</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q9-d" name="q9" value="d" class="html" required>
+                        <label for="q9-d">href</label>
+                    </div>
+                </div>
+
+                <div class="q10">
+                    <h2>10. Cum se defineste un link care se deschide intr-o fila noua?</h2>
+
+                    <div class="input">
+                        <input type="radio" id="q10-a" name="q10" value="a" class="html" required>
+                        <label for="q10-a">&lt;a href='URL' target='_blank'&gt;Text&lt;/a&gt;</label>
+                    </div>
+                    
+                    <div class="input">
+                        <input type="radio" id="q10-b" name="q10" value="b" class="html" required>
+                        <label for="q10-b">&lt;a href='URL' target='_new'&gt;Text&lt;/a&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q10-c" name="q10" value="c" class="html" required>
+                        <label for="q10-c">&lt;a href='URL' target='_tab'&gt;Text&lt;/a&gt;</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="radio" id="q10-d" name="q10" value="d" class="html" required>
+                        <label for="q10-d">&lt;a href='URL' target='_self'&gt;Text&lt;/a&gt;</label>
+                    </div>
+
+                    <div class="buttons quiz">
+                        <button type="button" class="html-btn btn">
+                            <p>
+                                Trimite
+                            </p>
+                        </button>
+                    </div>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <div class="top">
+            <div class="logo">
+                <img src="../../images/logo.svg" alt="logo">
+            </div>
+
+            <div class="liceu">
+                <p>
+                    <a href="https://www.cncv.ro/" noreferrer noopener>Colegiul National Cantemir-Voda</a>
+                </p>
+            </div>
+            
+        </div>
+
+        <div class="bot">
+            <div class="text">
+                <p>
+                    Lectii gandite cu grija pentru a-ti face inceputul in programare mai clar, mai simplu si mai captivant.
+                </p>
+            </div>
+
+            <div class="concurs">
+                <p>
+                    Site realizat pentru proiectul "The beauty of Coding" 2025
+                </p>
+            </div>
+        </div>
+    </footer>
+
 </body>
 </html>
