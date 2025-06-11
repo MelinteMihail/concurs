@@ -242,11 +242,6 @@ footer .top .logo img {
 }
 
 @media only screen and (min-width: 1024px) and (max-width: 1440px) {
-
-    header nav {
-        margin-inline: 5px;
-    }
-
     main {
         margin-top: 5rem;
     }
