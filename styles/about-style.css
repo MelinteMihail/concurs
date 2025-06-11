@@ -140,6 +140,10 @@ footer .top .logo img {
         margin-inline: 5px;
     }
 
+    header nav .left img {
+        width: 200px;
+    }
+
     main {
         width: 70%;
         margin-top: 5rem;
