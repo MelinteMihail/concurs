@@ -18,10 +18,19 @@ body {
     color: #fff;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+[data-aos] {
+  overflow-x: hidden;
+}
+
 img {
-   margin: 0;
-   padding: 0;
-   display:block; 
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+    display:block; 
 }
 
 a {
@@ -333,6 +342,12 @@ footer .top .logo img {
 }
 
 @media only screen and (max-width: 767px) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+
     header nav {
         margin-inline: 5px;
     }
@@ -378,7 +393,10 @@ footer .top .logo img {
         display: none;
     }
 
-
+    main .explanation .title {
+        text-align: center;
+    }
+    
     main .explanation .content {
         flex-direction: column;
         align-items: center;
@@ -388,6 +406,10 @@ footer .top .logo img {
     main .explanation .content .learn,
     main .explanation .content .exercise  {
         width: 400px;
+    }
+
+    main .courses .courses-title {
+        text-align: center;
     }
 
     main .courses .courses-content {
